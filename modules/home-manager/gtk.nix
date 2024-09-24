@@ -12,12 +12,12 @@ gtk = {
         colorVariants = [ "dark" ];
       };
     };
-    iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme.override {
-        color = "black";
-      };
-    };
+    # iconTheme = {
+    #   name = "Papirus-Dark";
+    #   package = pkgs.papirus-icon-theme.override {
+    #     color = "black";
+    #   };
+    # };
     cursorTheme = {
       name = "Bibata-Modern-Ice";
       package = pkgs.bibata-cursors;

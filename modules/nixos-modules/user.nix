@@ -5,21 +5,21 @@
     useUserPackages = true;
     useGlobalPkgs = true;
     extraSpecialArgs = { inherit inputs; };
-    user = {
+    users.lkmqdoge = {
       imports = [
-        ./../home-manager/default.nix
+        ./../home-manager
       ];
       home.username = "lkmqdoge";
       home.homeDirectory = "/home/lkmqdoge";
       home.stateVersion = "24.05"; 
       programs.home-manager.enable = true;
+      programs.fish.enable = true;
     };
   };
   users.users.lkmqdoge = {
     isNormalUser = true;
     description = "Алексей Кизин";
     extraGroups = [ "networkmanager" "wheel" "audio" "input" ];
-    shell = pkgs.fish;
   };
   nix.settings.allowed-users = [ "lkmqdoge" ];
 }
