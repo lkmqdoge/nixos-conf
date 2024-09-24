@@ -3,8 +3,8 @@
     enable = true;
 
     settings = {
-      opleader.line = "gcc";
-      toggler.line = "gcc";
+      opleader.line = "<C-k>";
+      toggler.line = "<C-k>";
     };
   };
 }

@@ -16,7 +16,7 @@
 
       mouse = "a"; # Enable mouse control
       mousemodel = "extend"; # Mouse right-click extends the current selection
-
+      
       splitbelow = true; # A new window is put below the current one
       splitright = true; # A new window is put right of the current one
 
@@ -33,6 +33,7 @@
       ignorecase = true; # When the search query is lower-case, match both lower and upper-case
       smartcase = true; # Override the 'ignorecase' option if the search pattern contains upper dfsiojdsjfdjaifjiajjfjfajjas
 
+      mousescroll = "ver:1,hor:0";
       scrolloff = 12; # Number of screen lines to show around the cursor
 
       cursorline = true; # Highlight the screen line of the cursor

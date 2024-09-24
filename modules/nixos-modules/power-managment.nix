@@ -1,5 +1,8 @@
-{...}: 
+{pkgs, ...}: 
 {
+  systemd.packages = with pkgs; [
+    auto-cpufreq
+  ];
   powerManagement = {
     enable = true;
     cpuFreqGovernor = "performance";

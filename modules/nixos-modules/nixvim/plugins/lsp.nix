@@ -41,6 +41,8 @@
       servers = {
         nil_ls.enable = true;
         clangd.enable = true;
+        html.enable = true;
+        cssls.enable = true;
       };
     };
   };
