@@ -13,13 +13,19 @@
       home.homeDirectory = "/home/lkmqdoge";
       home.stateVersion = "24.05"; 
       programs.home-manager.enable = true;
-      programs.fish.enable = true;
     };
   };
   users.users.lkmqdoge = {
     isNormalUser = true;
     description = "Алексей Кизин";
     extraGroups = [ "networkmanager" "wheel" "audio" "input" ];
+    shell = pkgs.fish;
   };
+  programs.fish.enable = true;
   nix.settings.allowed-users = [ "lkmqdoge" ];
+
+  fonts.packages = with pkgs; [
+   (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
+  ];
+
 }

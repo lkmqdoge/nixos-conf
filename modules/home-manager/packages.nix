@@ -1,0 +1,34 @@
+{ pkgs, ...}:
+{
+   home.packages = with pkgs; [
+   kitty
+    pamixer
+    rofi-wayland
+    brightnessctl   
+    pwvucontrol
+    pkgs.discord
+    alacritty   
+    xfce.thunar 
+    firefox
+    swww
+    vim
+    telegram-desktop
+    pkgs.dunst
+    glib
+    libnotify
+    font-manager
+    font-awesome
+    unzip
+    vlc
+    feh
+    git   
+    wttrbar
+    pkgs.grim
+    pkgs.slurp
+    pkgs.wl-clipboard
+    clang
+    htop
+    virtualbox
+    godot_4
+  ];
+}

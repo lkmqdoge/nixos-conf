@@ -5,26 +5,26 @@
 
     settings = {
 
-      extraConfig = "monitor=,preferred,auto,1";
+      monitor=",preferred,auto,1";
 
       #autostart
       exec-once = [ 
         "swww init &"
 
-        "swww img ~/Загрузки/wallpaper1.jpg &"
+        "swww img ./../../../wallpaper/omoriwallpaper.jpg &"
 
         "nm-applet --indicator &"
-
+        "hyprctl setcursor Bibata-Modern-Ice 24 &"
         "waybar &"
-
+        "hyprlock"
         "dunst"
       ];
 
       input = {
         kb_layout = "us, ru";
         kb_options = "grp:alt_shift_toggle";
-        folow_mouse = 0;
-        sensivity = 0;
+        follow_mouse = 0;
+        sensitivity = 0;
         touchpad = {
           natural_scroll = true;
         }; 
@@ -173,7 +173,7 @@
         "$mainMod, mouse_down, workspace, e+1"
         "$mainMod, mouse_up, workspace, e-1"
                                                              
-        "$mainMod SHIFT, S, exec, grim -l 0 -g '$(slurp)' - | wl-copy"
+        "$mainMod SHIFT, S, exec, grim -l 0 -g \"$(slurp)\" - | wl-copy"
         "$mainMod, H, exec, pkill -SIGUSR1 waybar"
         "$mainMod, W, exec, pkill -SIGUSR2 waybar"
                                                

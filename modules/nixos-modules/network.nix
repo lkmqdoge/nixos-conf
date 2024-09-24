@@ -1,7 +1,7 @@
 { pkgs, ...}:
 {
   networking = {
-    hostName = "nixos";
+    hostName = "laptop";
     networkmanager.enable = true;
   };
   environment.systemPackages = with pkgs; [

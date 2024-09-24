@@ -20,7 +20,8 @@
     nixosConfigurations.default = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
-       ./hosts/laptop
+        ./hosts/laptop
+        inputs.nixvim.nixosModules.nixvim
       ];
     };
   };

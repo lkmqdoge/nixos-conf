@@ -3,16 +3,14 @@
     ./autoclose.nix
     ./ts-autotag.nix
     ./lualine.nix
-    ./transparent.nix
     ./neotree.nix
-    ./mini.nix
     ./comment.nix
     ./floaterm.nix
-    # ./telescope.nix
-#    ./barbar.nix
+    ./telescope.nix
     ./nix.nix
     ./lsp.nix
     ./cmp.nix
     ./vim-css-color.nix
+    ./copilot-chat.nix
   ];
 }
