@@ -93,12 +93,13 @@
         "float,title:^(Library)(.*)$"
         "float,title:^(File Upload)(.*)$"
         
-        "size 1280 720,^(org.telegram.desktop)$"
+        "size 1280 960,^(org.telegram.desktop)$"
         "float,^(org.telegram.desktop)$"
                                        
         "float,^(discord)$"
         "size 1600 900,^(discord)$"
                                        
+
         "float,^(kitty)$"
         "size 1280 720,^(kitty)$"
       ];
@@ -118,13 +119,15 @@
 
         "$mainMod, Q, exec, kitty"
         "$mainMod, C, killactive," 
-        "$mainMod, M, exit," 
+        "$mainMod, M, exec, hyprlock" 
         "$mainMod, E, exec, thunar"
         "$mainMod, V, togglefloating, "
         "$mainMod, J, togglesplit,"
         "$mainMod, T, exec, telegram-desktop"
         "$mainMod, D, exec, discord"
         "$mainMod, P, pin"
+        "$mainMod, F, fullscreen"
+
                                        
         "$mainMod, left, movefocus, l"
         "$mainMod, right, movefocus, r"

@@ -1,13 +1,15 @@
-{ pkgs, ...}:
+{ config, pkgs, inputs, ...}:
 {
-   home.packages = with pkgs; [
-   kitty
+  home.packages = with pkgs; [
+    gnome.gnome-software
+    inputs.prismlauncher.packages.${pkgs.system}.prismlauncher
+    steam-run
+    kitty
     pamixer
     rofi-wayland
     brightnessctl   
     pwvucontrol
     pkgs.discord
-    alacritty   
     xfce.thunar 
     firefox
     swww
@@ -29,6 +31,6 @@
     clang
     htop
     virtualbox
-    godot_4
+    dotnetCorePackages.sdk_6_0_1xx
   ];
 }

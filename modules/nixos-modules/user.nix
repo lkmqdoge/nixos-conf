@@ -22,6 +22,7 @@
     shell = pkgs.fish;
   };
   programs.fish.enable = true;
+  services.flatpak.enable = true;
   nix.settings.allowed-users = [ "lkmqdoge" ];
 
   fonts.packages = with pkgs; [

@@ -1,5 +1,6 @@
 {
   imports = [
+    ./godot.nix
     ./autoclose.nix
     ./ts-autotag.nix
     ./lualine.nix

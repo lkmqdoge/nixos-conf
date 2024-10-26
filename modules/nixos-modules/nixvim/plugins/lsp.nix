@@ -43,6 +43,9 @@
         clangd.enable = true;
         html.enable = true;
         cssls.enable = true;
+        gdscript.enable = true;
+        gdshader_lsp.enable = true;
+        sharp_ls.enable = true;
       };
     };
   };
