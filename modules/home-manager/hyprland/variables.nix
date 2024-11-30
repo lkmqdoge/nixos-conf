@@ -17,5 +17,6 @@
     SDL_VIDEODRIVER = "wayland";
     CLUTTER_BACKEND = "wayland";
     GTK_THEME = "Gruvbox-Dark";
+    DOTNET_CLI_TELEMETRY_OPTOUT = "1";
   };
 }

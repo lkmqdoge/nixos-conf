@@ -1,7 +1,7 @@
 {
   imports = [
     ./nixvim
-
+    ./opentabletdriver
     ./security.nix
     ./login.nix
     ./sound.nix

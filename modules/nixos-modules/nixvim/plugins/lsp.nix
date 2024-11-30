@@ -39,13 +39,16 @@
     lsp = {
       enable = true;
       servers = {
+        tsserver.enable = true;
+        jsonls.enable = true;
         nil_ls.enable = true;
         clangd.enable = true;
         html.enable = true;
         cssls.enable = true;
         gdscript.enable = true;
-        gdshader_lsp.enable = true;
-        sharp_ls.enable = true;
+        pyright.enable = true;
+        # gdshader_lsp.enable = true;
+        csharp_ls.enable = true;
       };
     };
   };

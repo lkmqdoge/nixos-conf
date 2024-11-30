@@ -1,15 +1,14 @@
 { config, pkgs, inputs, ...}:
 {
   home.packages = with pkgs; [
+    inputs.prismlauncher.packages.${pkgs.system}.prismlauncher # minecraft launcher
     gnome.gnome-software
-    inputs.prismlauncher.packages.${pkgs.system}.prismlauncher
     steam-run
     kitty
     pamixer
     rofi-wayland
     brightnessctl   
     pwvucontrol
-    pkgs.discord
     xfce.thunar 
     firefox
     swww
@@ -18,10 +17,9 @@
     pkgs.dunst
     glib
     libnotify
-    font-manager
     font-awesome
-    unzip
-    vlc
+    unzip                                           # archive manager
+    vlc                                             # media player
     feh
     git   
     wttrbar
@@ -30,7 +28,12 @@
     pkgs.wl-clipboard
     clang
     htop
-    virtualbox
-    dotnetCorePackages.sdk_6_0_1xx
+    typescript                                      # typescript for my lab at uni
+    nodePackages.typescript-language-server         #
+    nodejs_22                                       #
+    virtualbox                                      # vbox
+    dotnetCorePackages.sdk_8_0_1xx                  # dotnet sdk -> fuck microsoft
+    vesktop                                         # discord on wayland
+    libreoffice                                     # office programms
   ];
 }
