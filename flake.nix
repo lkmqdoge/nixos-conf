@@ -20,31 +20,25 @@
      inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    stylix.url = "github:danth/stylix";
+    # stylix.url = "github:danth/stylix";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
   };
 
   outputs = inputs @ { 
     self, 
     nixpkgs, 
-    stylix,
+    # stylix,
     home-manager,
     chaotic, 
     ... 
-  } :
-    let
-      lib = nixpkgs.lib;
-    in
-  {    
-    inherit lib;
-
+  }: {    
     nixosConfigurations = {
-      laptop = lib.nixosSystem {
+      laptop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
+        specialArgs = { inherit self inputs; };
         modules = [ 
-          ./hosts/laptop 
-          stylix.nixosModules.stylix
+          ./hosts/laptop/configuration.nix
+          # stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
           {
             home-manager = {
@@ -57,6 +51,5 @@
         ];
       };
     };
-
   };
 }

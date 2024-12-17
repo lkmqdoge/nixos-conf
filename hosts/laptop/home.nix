@@ -31,7 +31,6 @@
     unzip                                           # archive manager
     vlc                                             # media player
     feh                                             # image viewer 
-    git   
     wttrbar                                         # thing for weather widget
     pkgs.grim                                       # 
     pkgs.slurp                                      #
@@ -52,11 +51,8 @@
      EDITOR = "nvim";
   };
 
-  home.shellAliases = {
-    nv = "nvim";
-  };
-
   programs.fish.enable = true;
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }

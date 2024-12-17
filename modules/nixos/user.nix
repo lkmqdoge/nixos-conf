@@ -7,5 +7,6 @@
     shell = pkgs.fish;
   };
 
+  programs.fish.enable = true;
   services.flatpak.enable = true;
 }

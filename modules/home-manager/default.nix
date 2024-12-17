@@ -1,5 +1,6 @@
 {inputs, username, host, ...}: {
   imports = [
+    ./fonts.nix
     ./vscodium.nix
     ./hyprland                        # window manager
     ./waybar
