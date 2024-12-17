@@ -1,11 +1,12 @@
+{ inputs, ...}:
 {
   imports = [
+    inputs.nixvim.homeManagerModules.nixvim
     ./opts.nix
     ./keymaps.nix
     ./plugins/plugins-bundle.nix
   ];
 
-	
   programs.nixvim = {
     enable = true;
     defaultEditor = true;

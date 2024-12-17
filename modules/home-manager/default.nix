@@ -4,7 +4,7 @@
     ./hyprland                        # window manager
     ./waybar
     ./gtk.nix                         # gtk theme
-    ./packages.nix
     ./rofi.nix
+    ./nixvim
   ];
 }

@@ -1,7 +1,7 @@
+{ pkgs, ... }:
 {
   imports = [
-    ./nixvim
-    ./opentabletdriver
+    ./opentabletdriver.nix
     ./security.nix
     ./login.nix
     ./sound.nix
@@ -11,6 +11,9 @@
     ./boot.nix
     ./network.nix
     ./system.nix
-    #./virtualization.nix
+  ];
+
+  environment.systemPackages = with pkgs; [
+    git
   ];
 }

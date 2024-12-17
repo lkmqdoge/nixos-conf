@@ -1,5 +1,5 @@
 {
-  description = "Nixos config flake";
+  description = "lkmqdoge's nixos config flake";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -9,35 +9,54 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     prismlauncher = {
      url = "github:PrismLauncher/PrismLauncher";
      inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    stylix.url = "github:danth/stylix";
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
   };
 
-  outputs = { 
+  outputs = inputs @ { 
     self, 
     nixpkgs, 
-    nixvim,
-    prismlauncher,
+    stylix,
     home-manager,
-    hyprland,
+    chaotic, 
     ... 
-    } @ inputs: let 
+  } :
+    let
+      lib = nixpkgs.lib;
+    in
+  {    
+    inherit lib;
 
-    inherit (self) outputs;
-
-    in {
-    nixosConfigurations.default = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs outputs;};
-      modules = [
-        ./hosts/laptop
-        inputs.nixvim.nixosModules.nixvim
-      ];
+    nixosConfigurations = {
+      laptop = lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [ 
+          ./hosts/laptop 
+          stylix.nixosModules.stylix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              extraSpecialArgs = { inherit inputs; };
+              users.lkmqdoge = import ./hosts/laptop/home.nix;
+            };
+          }
+        ];
+      };
     };
+
   };
 }
