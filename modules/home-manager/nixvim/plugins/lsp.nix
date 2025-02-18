@@ -19,22 +19,6 @@
 
     hmts.enable = true;
 
-    # lspkind = {
-    #   enable = true;
-    #
-    #   cmp = {
-    #     enable = true;
-    #     menu = {
-    #       nvim_lsp = "[LSP]";
-    #       nvim_lua = "[api]";
-    #       path = "[path]";
-    #       luasnip = "[snip]";
-    #       buffer = "[buffer]";
-    #       neorg = "[neorg]";
-    #       cmp_tabby = "[Tabby]";
-    #     };
-    #   };
-    # };
 
     lsp = {
       enable = true;
@@ -45,9 +29,11 @@
         clangd.enable = true;
         html.enable = true;
         cssls.enable = true;
-        gdscript.enable = true;
+        # gdscript.enable = true;
         pyright.enable = true;
         # gdshader_lsp.enable = true;
+        java_language_server.enable = true;
+        asm_lsp.enable = true;
         csharp_ls.enable = true;
       };
     };

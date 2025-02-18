@@ -1,6 +1,9 @@
 { pkgs, ... }: 
 {
-  home.packages = (with pkgs; [ rofi-wayland ]);
+  home.packages = with pkgs; [ 
+    rofi-wayland
+    rofi-power-menu
+  ];
 
   xdg.configFile."rofi/theme.rasi".text = ''
     * {
@@ -18,7 +21,7 @@
 
   xdg.configFile."rofi/config.rasi".text = ''
     configuration{
-      modi: "run,drun,window";
+      modi: "drun";
       lines: 5;
       cycle: false;
       font: "JetBrainsMono NF Bold 15";
@@ -27,12 +30,9 @@
       terminal: "kitty";
       drun-display-format: "{icon} {name}";
       location: 0;
-      disable-history: true;
+      disable-history: false;
       hide-scrollbar: true;
       display-drun: " Apps ";
-      display-run: " Run ";
-      display-window: " Window ";
-      /* display-Network: " Network"; */
       sidebar-mode: true;
       sorting-method: "fzf";
     }

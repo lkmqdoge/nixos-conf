@@ -3,7 +3,6 @@
     ''* {
         border: none;
         border-radius: 0;
-        /* `otf-font-awesome` is required to be installed for icons */
         font-family: FiraCode Nerd Font;
         min-height: 0;
         font-size: 14px;
@@ -14,10 +13,6 @@
         background-color: rgba(4,4,5,0.6);
         color: #ebdbb2;
     }
-    /**/
-    /* window#waybar.hidden { */
-    /*     opacity: 0.2; */
-    /* } */
 
     #workspaces {
         margin-right: 6px;
@@ -82,6 +77,14 @@
         padding-right: 6px;
         border-radius: 6px 0px 0px 6px;
         background: #32302f;
+    }
+
+    #custom-power {
+      margin-right: 6px;
+      padding-right 6px;
+      border-radius: 6px;
+      color: #458588;
+      background: #32302f;
     }
 
     #custom-weather {

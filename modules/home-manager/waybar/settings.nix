@@ -1,9 +1,9 @@
-{ config, pkgs, ... }:
+{ ... }:
 {
   programs.waybar.settings.mainBar = {
     layer = "top";
     position = "top";
-    modules-left = [ "hyprland/workspaces" "hyprland/language" "network" "hyprland/window" ];
+    modules-left = [ "custom/power" "hyprland/workspaces" "hyprland/language" "network" "hyprland/window" ];
     modules-center = [ "clock" "custom/weather" ];
     modules-right = [ "pulseaudio" "custom/mem" "cpu" "backlight" "temperature" "battery" "tray" ];
 
@@ -53,6 +53,11 @@
       interval = 1800;
       exec = "wttrbar";
       return-type = "json";
+    };
+
+    "custom/power" = {
+      format = "";
+      on-click = "rofi -show power-menu -modi power-menu:rofi-power-menu";
     };
 
     pulseaudio = {

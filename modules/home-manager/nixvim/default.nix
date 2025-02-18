@@ -4,7 +4,7 @@
     inputs.nixvim.homeManagerModules.nixvim
     ./opts.nix
     ./keymaps.nix
-    ./plugins/plugins-bundle.nix
+    ./plugins
   ];
 
   programs.nixvim = {

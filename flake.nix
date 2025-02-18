@@ -20,14 +20,12 @@
      inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # stylix.url = "github:danth/stylix";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
   };
 
   outputs = inputs @ { 
     self, 
     nixpkgs, 
-    # stylix,
     home-manager,
     chaotic, 
     ... 
@@ -38,7 +36,6 @@
         specialArgs = { inherit self inputs; };
         modules = [ 
           ./hosts/laptop/configuration.nix
-          # stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
           {
             home-manager = {

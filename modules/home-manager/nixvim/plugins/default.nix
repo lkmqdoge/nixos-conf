@@ -12,6 +12,5 @@
     ./lsp.nix
     ./cmp.nix
     ./vim-css-color.nix
-    ./copilot-chat.nix
   ];
 }

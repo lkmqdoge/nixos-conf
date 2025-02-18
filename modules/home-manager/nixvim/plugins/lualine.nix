@@ -35,7 +35,7 @@
                 return msg
             end
           '';
-          icon = " ";
+          icon = " ";
           # color.fg = "#ffffff";
         }
         "encoding"
