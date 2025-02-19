@@ -3,6 +3,8 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    # nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
     home-manager = {
@@ -19,15 +21,12 @@
      url = "github:PrismLauncher/PrismLauncher";
      inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
   };
 
   outputs = inputs @ { 
     self, 
     nixpkgs, 
     home-manager,
-    chaotic, 
     ... 
   }: {    
     nixosConfigurations = {

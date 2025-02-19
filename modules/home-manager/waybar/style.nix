@@ -81,7 +81,7 @@
 
     #custom-power {
       margin-right: 6px;
-      padding-right 6px;
+      padding-right: 6px;
       border-radius: 6px;
       color: #458588;
       background: #32302f;

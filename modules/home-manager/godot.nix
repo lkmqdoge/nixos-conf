@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  # home.packages = with pkgs; [
-  #   godot_4-mono
-  # ];
+  home.packages = with pkgs; [
+    godot_4-mono
+  ];
 }
