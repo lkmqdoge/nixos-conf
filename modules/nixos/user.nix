@@ -1,11 +1,16 @@
-{ pkgs, inputs, ... }:
-{
-  users.users.lkmqdoge = {
-    isNormalUser = true;
-    description = "lkmqdoge";
-    extraGroups = [ "networkmanager" "wheel" "audio" "input" ];
-    shell = pkgs.fish;
-  };
+{pkgs, ...}: {
+  users = {
+    users = {
+      lkmqdoge = {
+        isNormalUser = true;
+        description = "lkmqdoge";
+        extraGroups = ["networkmanager" "wheel" "audio" "input"];
+        shell = pkgs.fish;
+        uid = 1000;
+      };
+    };
+  }; 
+
 
   programs.fish.enable = true;
   services.flatpak.enable = true;

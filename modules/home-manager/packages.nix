@@ -1,46 +1,55 @@
-{ pkgs, ...}:
-{
+{pkgs, ...}: {
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
-
     pamixer
-    brightnessctl   
+    brightnessctl
     pwvucontrol
 
-    prismlauncher                                   # minecraft launcher
-    kitty                                           # terminal :3
-    xfce.thunar 
+    prismlauncher # minecraft launcher
+    kitty # kibty :3
+    xfce.thunar
     telegram-desktop
     firefox
     vim
-    unzip                                           # archive manager
-    vlc                                             # media player
-    feh                                             # image viewer 
+    wireguard-tools
+    unzip # archive manager
+    vlc # media player
+    feh # image viewer
     htop
 
+    dig
+
+    grc
     libnotify
     pkgs.dunst
-    swww                                            # wallpaper util
-    wttrbar                                         # thing for weather widget
-    pkgs.grim                                       # 
-    pkgs.slurp                                      #
-    pkgs.wl-clipboard                               # screenshot tool
-    
+    swww # wallpaper util
+    wttrbar # thing for weather widget
+    pkgs.grim #
+    pkgs.slurp #
+    pkgs.wl-clipboard # screenshot tool
+
     glib
     gcc
+    gdb
     jdk
+    go
 
-    fasm                                            # assmembly
-    gdb                                             # debugger for assmembly
+    nasm
+    fasm # assmembly
 
-    typescript                                      # typescript for my lab at uni
-    nodePackages.typescript-language-server         #
-    nodejs_22                                       #
+    # web shit
+    typescript
+    nodejs_23
+    typescript-language-server
+    svelte-language-server
+    tailwindcss-language-server
+
     dotnetCorePackages.dotnet_8.sdk
+    csharp-ls
 
     aseprite
     krita
-    vesktop                                         # discord on wayland
-    libreoffice                                     # office programms
+    vesktop # discord on wayland
+    libreoffice # office programms
   ];
 }

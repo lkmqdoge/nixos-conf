@@ -1,6 +1,9 @@
-{ inputs, config, pkgs, ... }:
-
 {
+  inputs,
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ../../modules/home-manager
   ];
@@ -8,7 +11,6 @@
   home.username = "lkmqdoge";
   home.homeDirectory = "/home/lkmqdoge";
   home.stateVersion = "24.11";
-
 
   programs.fish.enable = true;
 

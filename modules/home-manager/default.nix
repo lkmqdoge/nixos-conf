@@ -1,18 +1,18 @@
-{inputs, username, host, ...}: {
+{
   imports = [
-    ./hyprland                        # window manager
-    ./fonts.nix                       # fonts
+    ./hyprland # window manager
     ./waybar
-    ./gtk.nix                         # gtk theme
+    ./nixvim
+    ./firefox
+
+    ./fish.nix
+    ./fonts.nix # fonts
+    ./gtk.nix # gtk theme
     ./rofi.nix
     ./packages.nix
     ./godot.nix
-
     ./thunar.nix
     ./fastfetch.nix
-
-    # Editors
-    ./vscodium.nix
-    ./nixvim
+    ./vscode.nix
   ];
 }

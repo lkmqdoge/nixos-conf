@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   home.sessionVariables = {
     NIXOS_OZONE_WL = "1";
     DISABLE_QT5_COMPAT = "0";

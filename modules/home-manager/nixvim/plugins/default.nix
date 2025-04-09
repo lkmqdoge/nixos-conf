@@ -1,16 +1,22 @@
 {
   imports = [
-    ./godot.nix
-    ./autoclose.nix
+    ./cellular-automaton.nix
+    ./tailwind-tools.nix
+    ./todo-comments.nix
+    ./vim-css-color.nix
     ./ts-autotag.nix
+    ./autoclose.nix
+    ./telescope.nix
+    ./markdown.nix
+    ./floaterm.nix
     ./lualine.nix
     ./neotree.nix
     ./comment.nix
-    ./floaterm.nix
-    ./telescope.nix
+    ./trouble.nix
+    ./godot.nix
+    ./goyo.nix
     ./nix.nix
     ./lsp.nix
     ./cmp.nix
-    ./vim-css-color.nix
   ];
 }

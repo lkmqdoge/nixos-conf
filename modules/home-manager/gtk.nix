@@ -1,5 +1,4 @@
-{ pkgs, ...}:
-{
+{pkgs, ...}: {
   gtk = {
     enable = true;
 
@@ -11,7 +10,7 @@
     theme = {
       name = "Gruvbox-Dark";
       package = pkgs.gruvbox-gtk-theme.override {
-        colorVariants = [ "dark" ];
+        colorVariants = ["dark"];
       };
     };
 
@@ -28,7 +27,7 @@
       size = 24;
     };
   };
-  
+
   home.pointerCursor = {
     name = "Bibata-Modern-Ice";
     package = pkgs.bibata-cursors;

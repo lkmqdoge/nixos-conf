@@ -1,5 +1,16 @@
 {
   programs.nixvim = {
+    extraConfigLua = ''
+      vim.api.nvim_create_autocmd({"FocusGained", "BufEnter", "CursorHold", "CursorHoldI"}, {
+        pattern = '*',
+        command = "if mode() !~ '\v(c|r.?|!|t)' && getcmdwintype() == \'\' | checktime | endif",
+      })
+
+      vim.api.nvim_create_autocmd({'FileChangedShellPost'}, {
+        pattern = '*',
+        command = "echohl WarningMsg | echo 'File changed on disk. Buffer reloaded.' | echohl None",
+      })
+    '';
 
     clipboard = {
       register = "unnamedplus";
@@ -8,6 +19,7 @@
 
     opts = {
       updatetime = 100; # Faster completion
+      autoread = true;
 
       relativenumber = true; # Relative line numbers
       number = true; # Display the absolute line number of the current line
@@ -16,7 +28,7 @@
 
       mouse = "a"; # Enable mouse control
       mousemodel = "extend"; # Mouse right-click extends the current selection
-      
+
       splitbelow = true; # A new window is put below the current one
       splitright = true; # A new window is put right of the current one
 
@@ -39,7 +51,7 @@
       cursorline = true; # Highlight the screen line of the cursor
       cursorcolumn = false; # Highlight the screen column of the cursor
       signcolumn = "yes"; # Whether to show the signcolumn
-      #colorcolumn = "100"; # Columns to highlight
+      colorcolumn = "100"; # Columns to highlight
 
       laststatus = 3; # When to use a status line for the last window
 

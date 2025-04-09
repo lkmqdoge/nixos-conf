@@ -1,4 +1,8 @@
-{ config, lib, ... }: {
+{
+  config,
+  lib,
+  ...
+}: {
   programs.nixvim = {
     globals = {
       mapleader = " ";
@@ -15,22 +19,18 @@
         {
           # Open Neotree
           "<leader>n" = ":Neotree<CR>";
+          "<leader>sd" = ":lua vim.diagnostic.open_float()<CR>";
 
-          # Esc to clear search results
+         # Esc to clear search results
           "<esc>" = ":noh<CR>";
 
           # fix Y behaviour
           Y = "y$";
 
+          # show diagnosis 
+
           # back and fourth between the two most recent files
           "<C-c>" = ":b#<CR>";
-
-          # close by Ctrl+x
-          "<C-x>" = ":close<CR>";
-
-          # save by \+s or Ctrl+s
-          "<leader>s" = ":w<CR>";
-          "<C-s>" = ":w<CR>";
 
           # navigate windows
           "<leader>h" = "<C-w>h";

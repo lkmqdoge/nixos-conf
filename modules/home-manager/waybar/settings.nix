@@ -1,11 +1,10 @@
-{ ... }:
-{
+{...}: {
   programs.waybar.settings.mainBar = {
     layer = "top";
     position = "top";
-    modules-left = [ "custom/power" "hyprland/workspaces" "hyprland/language" "network" "hyprland/window" ];
-    modules-center = [ "clock" "custom/weather" ];
-    modules-right = [ "pulseaudio" "custom/mem" "cpu" "backlight" "temperature" "battery" "tray" ];
+    modules-left = ["custom/power" "hyprland/workspaces" "hyprland/language" "network" "hyprland/window"];
+    modules-center = ["clock" "custom/weather"];
+    modules-right = ["pulseaudio" "custom/mem" "cpu" "backlight" "temperature" "battery" "tray"];
 
     "hyprland/workspaces" = {
       disable-scroll = true;
@@ -21,7 +20,7 @@
     network = {
       interface = "wlp1s0";
       format = "{ifname}";
-      format-wifi = "{essid} {bandwidthTotalBytes} ";
+      format-wifi = "{essid} {bandwidthDownBytes} {bandwidthUpBytes} ({signalStrength}%)";
       format-ethernet = "{ipaddr}/{cidr} 󰊗";
       format-disconnected = "";
       tooltip-format = "{ifname} via {gwaddr} 󰊗";
@@ -75,7 +74,7 @@
         phone = "";
         portable = "";
         car = "";
-        default = [ "" "" "" ];
+        default = ["" "" ""];
       };
       on-click = "pwvucontrol";
       min-length = 13;
@@ -97,14 +96,14 @@
     temperature = {
       critical-threshold = 80;
       format = "{temperatureC}°C {icon}";
-      format-icons = [ "" "" "" "" "" ];
+      format-icons = ["" "" "" "" ""];
       tooltip = false;
     };
 
     backlight = {
       device = "intel_backlight";
       format = "{percent}% {icon}";
-      format-icons = [ "󰌵" ];
+      format-icons = ["󰌵"];
       min-length = 7;
     };
 
@@ -118,7 +117,7 @@
       format-charging = "{capacity}% 󰂅";
       format-plugged = "{capacity}% ";
       format-alt = "{time} {icon}";
-      format-icons = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
+      format-icons = ["󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
     };
 
     tray = {

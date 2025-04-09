@@ -1,7 +1,9 @@
-{ pkgs, config, ... }:
-
 {
-  imports = [ 
+  pkgs,
+  config,
+  ...
+}: {
+  imports = [
     ./hardware-configuration.nix
     ../../modules/nixos
   ];
@@ -12,10 +14,10 @@
     cpupower-gui
     powertop
   ];
-  
-  services = {    
+
+  services = {
     power-profiles-daemon.enable = true;
- 
+
     upower = {
       enable = true;
       percentageLow = 20;
@@ -23,7 +25,6 @@
       percentageAction = 3;
       criticalPowerAction = "PowerOff";
     };
-  
   };
 
   powerManagement.cpuFreqGovernor = "ondemand";
@@ -37,5 +38,4 @@
       ]
       ++ [pkgs.cpupower-gui];
   };
-
 }

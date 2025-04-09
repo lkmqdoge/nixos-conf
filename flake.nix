@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    # nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
 
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
@@ -18,29 +17,40 @@
     };
 
     prismlauncher = {
-     url = "github:PrismLauncher/PrismLauncher";
-     inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:PrismLauncher/PrismLauncher";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    alejandra = {
+      url = "github:kamadorueda/alejandra/3.1.0";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = inputs @ { 
-    self, 
-    nixpkgs, 
+  outputs = inputs @ {
+    self,
+    nixpkgs,
+    alejandra,
     home-manager,
-    ... 
-  }: {    
+    ...
+  }: {
     nixosConfigurations = {
-      laptop = nixpkgs.lib.nixosSystem {
+      laptop = nixpkgs.lib.nixosSystem rec {
+        specialArgs = {inherit self inputs;};
         system = "x86_64-linux";
-        specialArgs = { inherit self inputs; };
-        modules = [ 
+
+        modules = [
           ./hosts/laptop/configuration.nix
+          {
+            environment.systemPackages = [alejandra.defaultPackage.${system}];
+          }
+
           home-manager.nixosModules.home-manager
           {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              extraSpecialArgs = { inherit inputs; };
+              extraSpecialArgs = {inherit inputs;};
               users.lkmqdoge = import ./hosts/laptop/home.nix;
             };
           }

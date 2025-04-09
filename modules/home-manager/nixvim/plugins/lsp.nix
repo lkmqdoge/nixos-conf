@@ -1,40 +1,138 @@
 {
-  programs.nixvim.plugins = {
-
-    treesitter = {
-      enable = true;
-      nixvimInjections = true;
-      folding = true;
-      indent = true;
-    };
-
-    treesitter-refactor = {
-      enable = true;
-      highlightDefinitions = {
+  programs.nixvim = {
+    plugins = {
+      treesitter-context = {
         enable = true;
-        # Set to false if you have an `updatetime` of ~100.
-        clearOnCursorMove = false;
+        settings = {
+          mode = "topline";
+        };
       };
-    };
 
-    hmts.enable = true;
+      treesitter = {
+        folding = true;
+        enable = true;
+        settings = {
+          indent.enable = true;
+          highlight = {
+            enable = true;
+            additional_vim_regex_highlighting = true;
+          };
+        };
+      };
 
+      treesitter-refactor = {
+        enable = true;
+        highlightDefinitions = {
+          enable = true;
+          clearOnCursorMove = false;
+        };
+      };
 
-    lsp = {
-      enable = true;
-      servers = {
-        tsserver.enable = true;
-        jsonls.enable = true;
-        nil_ls.enable = true;
-        clangd.enable = true;
-        html.enable = true;
-        cssls.enable = true;
-        # gdscript.enable = true;
-        pyright.enable = true;
-        # gdshader_lsp.enable = true;
-        java_language_server.enable = true;
-        asm_lsp.enable = true;
-        csharp_ls.enable = true;
+      # highlight homemanager files
+      hmts.enable = true;
+
+      # i hate this >:(
+      # lsp-signature = {
+      #   enable = true;
+      # };
+  
+      # i hate this even MORE 
+      # lsp-lines.enable = true;
+
+      lsp = {
+        inlayHints = true;
+        enable = true;
+        servers = {
+          tailwindcss.enable = true;
+          csharp_ls.enable = true;
+          pyright.enable = true;
+          nil_ls.enable = true;
+          svelte.enable = true;
+          clangd.enable = true;
+          jsonls.enable = true;
+          jdtls.enable = true;
+          cssls.enable = true;
+          html.enable = true;
+          gopls = {
+            enable = true;
+            extraOptions = {
+              init_options = {
+                semanticTokens = true;
+                hints = {
+                  functionTypeParameters = true;
+                  assignVariableTypes = true;
+                  rangeVariableTypes = true;
+                  constantValues = true;
+                  parameterNames = true;
+                };
+              };
+            };
+          };
+          gdscript = {
+            enable = true;
+            package = null;
+            extraOptions = {
+              cmd = {
+                __raw = ''
+                  vim.lsp.rpc.connect("127.0.0.1", "6005")
+                '';
+              };
+            };
+          };
+          ts_ls = {
+            enable = true;
+            extraOptions = {
+              init_options = {
+                preferences = {
+                  importModuleSpecifierPreference = "non-relative";
+                  includeCompletionsForImportStatements = true;
+                  includeCompletionsForModuleExports = true;
+                };
+              };
+            };
+            settings = {
+              init_options = {
+                preferences = {
+                  importModuleSpecifierPreference = "non-relative";
+                };
+              };
+              typescript = {
+                preferences = {
+                  includeCompletionsForModuleExports = true;
+                  includeCompletionsForImportStatements = true;
+                  importModuleSpecifier = "non-relative";
+                };
+                inlayHints = {
+                  includeInlayParameterNameHints = "all"; # -- 'none' | 'literals' | 'all'
+                  includeInlayParameterNameHintsWhenArgumentMatchesName = true;
+                  includeInlayVariableTypeHints = true;
+                  includeInlayFunctionParameterTypeHints = true;
+                  includeInlayVariableTypeHintsWhenTypeMatchesName = true;
+                  includeInlayPropertyDeclarationTypeHints = true;
+                  includeInlayFunctionLikeReturnTypeHints = true;
+                  includeInlayEnumMemberValueHints = true;
+                };
+              };
+              javascript = {
+                preferences = {
+                  includeCompletionsForModuleExports = true;
+                  includeCompletionsForImportStatements = true;
+                  importModuleSpecifier = "non-relative";
+                };
+                inlayHints = {
+                  includeInlayParameterNameHints = "all"; # -- 'none' | 'literals' | 'all'
+                  includeInlayParameterNameHintsWhenArgumentMatchesName = true;
+                  includeInlayVariableTypeHints = true;
+                  includeInlayFunctionParameterTypeHints = true;
+                  includeInlayVariableTypeHintsWhenTypeMatchesName = true;
+                  includeInlayPropertyDeclarationTypeHints = true;
+                  includeInlayFunctionLikeReturnTypeHints = true;
+                  includeInlayEnumMemberValueHints = true;
+                };
+              };
+            };
+          };
+        };
       };
     };
   };

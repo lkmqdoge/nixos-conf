@@ -1,15 +1,13 @@
-{ pkgs, ... }:
-let 
+{pkgs, ...}: let
   text = "rgb(251, 241, 199)";
-in
-{
-  home.packages = [ pkgs.hyprlock ];
+in {
+  home.packages = [pkgs.hyprlock];
   xdg.configFile."hypr/hyprlock.conf".text = ''
     # BACKGROUND
     background {
       monitor =
-      path = ${./../../../wallpaper/omoriwallpaper.jpg}
-      blur_passes = 1
+      path = ${./../../../wallpaper/meowcafe.png}
+      blur_passes = 0
       contrast = 0.8916
       brightness = 0.8172
       vibrancy = 0.1696
@@ -26,7 +24,7 @@ in
 
     # Time
     label {
-      monitor = 
+      monitor =
       text = cmd[update:1000] echo "$(date +"%k:%M")"
       color = rgba(235, 219, 178, .9)
       font_size = 111
@@ -81,7 +79,7 @@ in
       monitor =
       size = 350, 50
       outline_thickness = 0
-      rounding = 15
+      rounding = 4
       dots_size = 0.25 # Scale of input-field height, 0.2 - 0.8
       dots_spacing = 0.4 # Scale of dots' absolute size, 0.0 - 1.0
       dots_center = true

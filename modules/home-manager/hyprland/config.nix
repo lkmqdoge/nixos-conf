@@ -1,18 +1,12 @@
-{ ... }:
-{
+{...}: {
   wayland.windowManager.hyprland = {
     enable = true;
-
     settings = {
-
-      monitor=",preferred,auto,1";
-
+      monitor = ",preferred,auto,1";
       #autostart
-      exec-once = [ 
+      exec-once = [
         "swww init &"
-
         "swww img ./../../../wallpaper/omoriwallpaper.jpg &"
-
         "nm-applet --indicator &"
         "hyprctl setcursor Bibata-Modern-Ice 24 &"
         "waybar &"
@@ -27,7 +21,7 @@
         sensitivity = 0;
         touchpad = {
           natural_scroll = true;
-        }; 
+        };
       };
 
       general = {
@@ -44,7 +38,8 @@
       decoration = {
         rounding = 2;
         blur.enabled = false;
-        drop_shadow = false;
+        # drop_shadow = false;
+        shadow.enabled = false;
       };
 
       animations.enabled = false;
@@ -54,7 +49,7 @@
         preserve_split = "yes";
       };
 
-      master  = {
+      master = {
         new_status = "master";
         mfact = 0.5;
       };
@@ -67,7 +62,7 @@
 
       misc = {
         disable_hyprland_logo = true;
-        force_default_wallpaper = 0; 
+        force_default_wallpaper = 0;
         vfr = true;
       };
 
@@ -82,7 +77,6 @@
         warp_on_change_workspace = true;
         no_warps = true;
       };
-        
 
       windowrule = [
         "float,title:^(Open File)(.*)$"
@@ -92,13 +86,12 @@
         "float,title:^(Save As)(.*)$"
         "float,title:^(Library)(.*)$"
         "float,title:^(File Upload)(.*)$"
-        
+
         "size 1280 960,^(org.telegram.desktop)$"
         "float,^(org.telegram.desktop)$"
-                                       
+
         "float,^(discord)$"
         "size 1600 900,^(discord)$"
-                                       
 
         "float,^(kitty)$"
         "size 1280 720,^(kitty)$"
@@ -115,30 +108,30 @@
       ];
 
       "$mainMod" = "SUPER";
-       bind = [
-
-        "$mainMod, Q, exec, kitty"
-        "$mainMod, C, killactive," 
-        "$mainMod, M, exec, hyprlock" 
-        "$mainMod, E, exec, thunar"
-        "$mainMod, V, togglefloating, "
-        "$mainMod, J, togglesplit,"
+      bind = [
         "$mainMod, T, exec, telegram-desktop"
         "$mainMod, D, exec, discord"
+        "$mainMod, Q, exec, kitty"
+        "$mainMod, M, exec, hyprlock"
+        "$mainMod, E, exec, thunar"
+
+        "$mainMod, C, killactive,"
+        "$mainMod, V, togglefloating, "
         "$mainMod, P, pin"
         "$mainMod, F, fullscreen"
 
-                                       
-        "$mainMod, left, movefocus, l"
-        "$mainMod, right, movefocus, r"
-        "$mainMod, up, movefocus, u"
-        "$mainMod, down, movefocus, d"
-                                       
-        "$mainMod SHIFT, left, movewindow, l"
-        "$mainMod SHIFT, right, movewindow, r"
-        "$mainMod SHIFT, up, movewindow, u"
-        "$mainMod SHIFT, down, movewindow, d"
-                                       
+        "$mainMod SHIFT, D, togglesplit,"
+
+        "$mainMod, H, movefocus, l"
+        "$mainMod, L, movefocus, r"
+        "$mainMod, K, movefocus, u"
+        "$mainMod, J, movefocus, d"
+
+        "$mainMod SHIFT, H, movewindow, l"
+        "$mainMod SHIFT, L, movewindow, r"
+        "$mainMod SHIFT, K, movewindow, u"
+        "$mainMod SHIFT, J, movewindow, d"
+
         "$mainMod, 1, workspace, 1"
         "$mainMod, 2, workspace, 2"
         "$mainMod, 3, workspace, 3"
@@ -149,7 +142,7 @@
         "$mainMod, 8, workspace, 8"
         "$mainMod, 9, workspace, 9"
         "$mainMod, 0, workspace, 10"
-                                       
+
         "$mainMod SHIFT, 1, movetoworkspace, 1"
         "$mainMod SHIFT, 2, movetoworkspace, 2"
         "$mainMod SHIFT, 3, movetoworkspace, 3"
@@ -164,37 +157,37 @@
         ",XF86AudioMute,         exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
         ",XF86AudioMicMute,      exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
 
-        "$mainMod CTRL, left, resizeactive, -60 0"
-        "$mainMod CTRL, right, resizeactive, 60 0"
-        "$mainMod CTRL, down, resizeactive, 0 60"
-                                                             
+        "$mainMod CTRL, H, resizeactive, -60 0"
+        "$mainMod CTRL, J, resizeactive, 0 60"
+        "$mainMod CTRL, K, resizeactive, 0 -60"
+        "$mainMod CTRL, L, resizeactive, 60 0"
+
         "$mainMod, O, togglespecialworkspace, magic"
         "$mainMod SHIFT, O, movetoworkspace, special:magic"
-                                                             
-        "SUPER, Tab, cyclenext, "
-        "SUPER, Tab, bringactivetotop," 
+
+        "$mainMod, Tab, cyclenext, "
+        "$mainMod, Tab, bringactivetotop,"
         "$mainMod, mouse_down, workspace, e+1"
         "$mainMod, mouse_up, workspace, e-1"
-                                                             
+
         "$mainMod SHIFT, S, exec, grim -l 0 -g \"$(slurp)\" - | wl-copy"
-        "$mainMod, H, exec, pkill -SIGUSR1 waybar"
-        "$mainMod, W, exec, pkill -SIGUSR2 waybar"
-                                               
+        "$mainMod SHIFT, H, exec, pkill -SIGUSR1 waybar"
+        "$mainMod SHIFT, W, exec, pkill -SIGUSR2 waybar"
+
         "$mainMod, S, exec, rofi -show drun -show-icons"
+      ];
 
-  ];
+      binde = [
+        ",XF86AudioLowerVolume,  exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+        ",XF86AudioRaiseVolume,  exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+        ",XF86MonBrightnessUp,   exec, brightnessctl s 10%+"
+        ",XF86MonBrightnessDown, exec, brightnessctl s 10%-"
+      ];
 
-  binde = [
-    ",XF86AudioLowerVolume,  exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-    ",XF86AudioRaiseVolume,  exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-    ",XF86MonBrightnessUp,   exec, brightnessctl s 10%+"
-    ",XF86MonBrightnessDown, exec, brightnessctl s 10%-"
-  ];
-
-  bindm = [
-    "$mainMod, mouse:272, movewindow"
-    "$mainMod, mouse:273, resizewindow"
-  ];
+      bindm = [
+        "$mainMod, mouse:272, movewindow"
+        "$mainMod, mouse:273, resizewindow"
+      ];
     };
   };
 }

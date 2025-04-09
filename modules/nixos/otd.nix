@@ -1,4 +1,3 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   hardware.opentabletdriver.enable = true;
 }
