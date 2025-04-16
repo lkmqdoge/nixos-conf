@@ -87,14 +87,14 @@
         "float,title:^(Library)(.*)$"
         "float,title:^(File Upload)(.*)$"
 
-        "size 1280 960,^(org.telegram.desktop)$"
-        "float,^(org.telegram.desktop)$"
+        "size 1280 960,title:^(org.telegram.desktop)$"
+        "float,title:^(org.telegram.desktop)$"
 
-        "float,^(discord)$"
-        "size 1600 900,^(discord)$"
+        "float,title:^(discord)$"
+        "size 1600 900,title:^(discord)$"
 
-        "float,^(kitty)$"
-        "size 1280 720,^(kitty)$"
+        "float,title:^(kitty)$"
+        "size 1280 720,title:^(kitty)$"
       ];
 
       windowrulev2 = [

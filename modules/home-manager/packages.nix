@@ -37,7 +37,9 @@
     nasm
     fasm # assmembly
 
-    # web shit
+    protoc-gen-go # furry go code gen
+    protobuf
+    sqlc
     typescript
     nodejs_23
     typescript-language-server

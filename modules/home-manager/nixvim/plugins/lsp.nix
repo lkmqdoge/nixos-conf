@@ -43,9 +43,11 @@
         inlayHints = true;
         enable = true;
         servers = {
+
           tailwindcss.enable = true;
           csharp_ls.enable = true;
           pyright.enable = true;
+          protols.enable = true;
           nil_ls.enable = true;
           svelte.enable = true;
           clangd.enable = true;
@@ -59,26 +61,29 @@
               init_options = {
                 semanticTokens = true;
                 hints = {
-                  functionTypeParameters = true;
-                  assignVariableTypes = true;
-                  rangeVariableTypes = true;
+                  functionTypeParameters = false;
+                  assignVariableTypes = false;
+                  rangeVariableTypes = false;
+                  parameterNames = false;
                   constantValues = true;
-                  parameterNames = true;
                 };
               };
             };
           };
+
+          # gdshader_lsp.enable = true;
           gdscript = {
             enable = true;
             package = null;
             extraOptions = {
               cmd = {
                 __raw = ''
-                  vim.lsp.rpc.connect("127.0.0.1", "6005")
+                  vim.lsp.rpc.connect("127.0.0.1", 6005)
                 '';
               };
             };
           };
+
           ts_ls = {
             enable = true;
             extraOptions = {
@@ -90,6 +95,7 @@
                 };
               };
             };
+
             settings = {
               init_options = {
                 preferences = {

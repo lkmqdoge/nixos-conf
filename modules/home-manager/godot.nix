@@ -1,5 +1,7 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    godot_4-mono
+    godot-mono
+    godot_4-export-templates
+    gdtoolkit_4
   ];
 }
