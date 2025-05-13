@@ -84,6 +84,15 @@
             };
           };
 
+          asm_lsp = {
+            enable = true;
+            filetypes = [
+              "asm"
+              "s"
+              "S"
+            ];
+          };
+
           ts_ls = {
             enable = true;
             extraOptions = {
@@ -139,7 +148,19 @@
             };
           };
         };
+
       };
     };
   };
+  
+  xdg.configFile."asm-lsp/.asm-lsp.toml".text = ''
+    [default_config]
+    assembler = "nasm"
+    instruction_set = "x86/x86-64"
+
+    [opts]
+    compiler = "nasm"
+    diagnostics = true
+    default_diagnostics = false 
+  '';
 }

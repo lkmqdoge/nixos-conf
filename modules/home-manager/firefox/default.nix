@@ -8,8 +8,7 @@
         isDefault = true;
         settings = {
           "browser.search.defaultenginename" = "duckduckgo";
-          "browser.shell.checkDefaultBrowser" = false;
-          "browser.shell.defaultBrowserCheckCount" = 1;
+          "browser.shell.checkDefaultBrowser" = false; "browser.shell.defaultBrowserCheckCount" = 1;
           "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
           "browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar" = false;
           "browser.search.suggest.enabled" = false;
@@ -41,7 +40,13 @@
           "browser.urlbar.suggest.pocket" = false;
           "browser.urlbar.suggest.topsites" = false;
         };
-        userChrome = builtins.readFile ./userChrome.css;
+
+        userChrome = ./userChrome.css;
+        # userChrome = ''
+        #   #TabsToolbar {
+        #     display: none !important;
+        #   }
+        # '';
       };
     };
   };

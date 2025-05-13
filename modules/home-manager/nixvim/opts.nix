@@ -1,5 +1,11 @@
 {
   programs.nixvim = {
+    diagnostics = {
+      signs = true;
+      virtual_text = true;
+    };
+
+
     extraConfigLua = ''
       vim.api.nvim_create_autocmd({"FocusGained", "BufEnter", "CursorHold", "CursorHoldI"}, {
         pattern = '*',

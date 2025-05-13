@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   imports = [
+    ./steam.nix
     ./otd.nix
     ./security.nix
     ./login.nix
