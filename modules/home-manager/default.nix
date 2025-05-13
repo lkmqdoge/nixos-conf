@@ -4,6 +4,7 @@
     ./waybar
     ./nixvim
     ./firefox
+    ./tmux.nix
 
     ./fish.nix
     ./fonts.nix # fonts
