@@ -49,7 +49,6 @@
       "
     '';
     plugins = [
-      { name = "sponge"; src = pkgs.fishPlugins.sponge.src; }
       { name = "bass"; src = pkgs.fishPlugins.bass.src; }
       { name = "grc"; src = pkgs.fishPlugins.grc.src; }
       { name = "z"; src = pkgs.fishPlugins.z.src; }

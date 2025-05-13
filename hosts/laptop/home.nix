@@ -11,9 +11,6 @@
   home.username = "lkmqdoge";
   home.homeDirectory = "/home/lkmqdoge";
   home.stateVersion = "24.11";
-
-  programs.fish.enable = true;
-
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
