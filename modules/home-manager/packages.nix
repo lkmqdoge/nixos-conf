@@ -41,7 +41,7 @@
     protobuf
     sqlc
     typescript
-    nodejs_23
+    nodejs_24
     typescript-language-server
     svelte-language-server
     tailwindcss-language-server
