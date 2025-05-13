@@ -31,7 +31,7 @@
       location: 0;
       disable-history: false;
       hide-scrollbar: true;
-      display-drun: " Apps ";
+      display-drun: "";
       sidebar-mode: true;
       sorting-method: "fzf";
     }

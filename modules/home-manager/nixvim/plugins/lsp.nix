@@ -20,6 +20,7 @@
         };
       };
 
+
       treesitter-refactor = {
         enable = true;
         highlightDefinitions = {
@@ -40,10 +41,10 @@
       # lsp-lines.enable = true;
 
       lsp = {
-        inlayHints = true;
+        inlayHints = false; # is fucking hate it 
         enable = true;
         servers = {
-
+          jdtls.enable = true;
           tailwindcss.enable = true;
           csharp_ls.enable = true;
           pyright.enable = true;
@@ -52,7 +53,6 @@
           svelte.enable = true;
           clangd.enable = true;
           jsonls.enable = true;
-          jdtls.enable = true;
           cssls.enable = true;
           html.enable = true;
           gopls = {

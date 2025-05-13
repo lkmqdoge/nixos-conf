@@ -59,6 +59,7 @@
       textwidth = 0;                # Maximum width of text that is being inserted.  A longer line will be
       foldlevel = 99;               # Folds with a level higher than this number will be closed
       completeopt = ["menu" "menuone" "noselect"]; # For CMP plugin
+
     };
   };
 }
