@@ -9,6 +9,10 @@
       filteredItems = {
         hideDotfiles = false;
         hideGitignored = false;
+        hideByPattern = [
+          "*.import"
+          "*.uid"
+        ];
       };
     };
   };
