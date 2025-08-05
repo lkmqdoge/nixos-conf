@@ -9,7 +9,7 @@
     ./telescope.nix
     ./markdown.nix
     ./floaterm.nix
-    ./hardtime.nix
+    # ./hardtime.nix
     ./lualine.nix
     ./neotree.nix
     ./comment.nix
