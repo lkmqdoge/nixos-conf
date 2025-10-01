@@ -21,13 +21,13 @@
           "<leader>n" = ":Neotree<CR>";
           "<leader>sd" = ":lua vim.diagnostic.open_float()<CR>";
 
-         # Esc to clear search results
+          # Esc to clear search results
           "<esc>" = ":noh<CR>";
 
           # fix Y behaviour
           Y = "y$";
 
-          # show diagnosis 
+          # show diagnosis
 
           # back and fourth between the two most recent files
           "<C-c>" = ":b#<CR>";

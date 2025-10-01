@@ -20,7 +20,6 @@
         };
       };
 
-
       treesitter-refactor = {
         enable = true;
         highlightDefinitions = {
@@ -36,17 +35,17 @@
       # lsp-signature = {
       #   enable = true;
       # };
-  
-      # i hate this even MORE 
+
+      # i hate this even MORE
       # lsp-lines.enable = true;
 
       lsp = {
-        inlayHints = false; # is fucking hate it 
+        inlayHints = false; # is fucking hate it
         enable = true;
         servers = {
           jdtls.enable = true;
           tailwindcss.enable = true;
-          csharp_ls.enable = true;
+          omnisharp.enable = true;
           pyright.enable = true;
           protols.enable = true;
           nil_ls.enable = true;
@@ -148,11 +147,10 @@
             };
           };
         };
-
       };
     };
   };
-  
+
   xdg.configFile."asm-lsp/.asm-lsp.toml".text = ''
     [default_config]
     assembler = "nasm"
@@ -161,6 +159,6 @@
     [opts]
     compiler = "nasm"
     diagnostics = true
-    default_diagnostics = false 
+    default_diagnostics = false
   '';
 }

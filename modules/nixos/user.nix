@@ -9,8 +9,7 @@
         uid = 1000;
       };
     };
-  }; 
-
+  };
 
   programs.fish.enable = true;
 }

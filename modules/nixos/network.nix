@@ -1,4 +1,8 @@
-{pkgs, config, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
     networkmanagerapplet
     samba
@@ -21,7 +25,7 @@
   #   wg0 = {
   #     address = [ "192.168.42.26/32" ];
   #     privateKeyFile = "/home/lkmqdoge/wireguard-keys/private";
-  #     
+  #
   #     peers = [
   #       {
   #         publicKey = "fr3gND42tdbjQWnQM5BhyhbJB29j0YhpygLdWYhWmUs=";
@@ -37,7 +41,7 @@
   # fileSystems."/home/lkmqdoge/fs2" = {
   #   device = "//10.0.1.13/data";
   #   fsType = "cifs";
-  #   options = 
+  #   options =
   #     let
   #       automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s,user,users";
   #

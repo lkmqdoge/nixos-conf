@@ -6,7 +6,7 @@
       #autostart
       exec-once = [
         "swww init &"
-        "swww img ./../../../wallpaper/omoriwallpaper.jpg &"
+        "swww img ./../../../wallpaper/meowcafe.png &"
         "nm-applet --indicator &"
         "hyprctl setcursor Bibata-Modern-Ice 24 &"
         "waybar &"
@@ -29,7 +29,7 @@
         gaps_in = 1;
         gaps_out = 1;
         border_size = 2;
-        "col.active_border" = "rgb(e9e9ea)";
+        "col.active_border" = "rgb(808080)";
         "col.inactive_border" = "rgba(595959aa)";
         layout = "dwindle";
         allow_tearing = false;

@@ -8,7 +8,8 @@
         isDefault = true;
         settings = {
           "browser.search.defaultenginename" = "duckduckgo";
-          "browser.shell.checkDefaultBrowser" = false; "browser.shell.defaultBrowserCheckCount" = 1;
+          "browser.shell.checkDefaultBrowser" = false;
+          "browser.shell.defaultBrowserCheckCount" = 1;
           "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
           "browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar" = false;
           "browser.search.suggest.enabled" = false;
@@ -35,18 +36,26 @@
           "full-screen-api.ignore-widgets" = false;
           "browser.urlbar.suggest.engines" = false;
           "browser.urlbar.suggest.openpage" = false;
-          "browser.urlbar.suggest.bookmark" = false;
-          "browser.urlbar.suggest.addons" = false;
+          "browser.urlbar.suggest.bookmark" = true;
+          "browser.urlbar.suggest.addons" = true;
           "browser.urlbar.suggest.pocket" = false;
           "browser.urlbar.suggest.topsites" = false;
         };
 
+        search = {
+          force = true;
+          default = "Startpage";
+          engines = {
+            "Startpage" = {
+              urls = [{ template = "https://www.startpage.com/rvd/search?query={searchTerms}&language=auto"; }];
+              icon = "https://www.startpage.com/sp/cdn/favicons/mobile/android-icon-192x192.png";
+              updateInterval = 24 * 60 * 60 * 1000; # every day
+              definedAliases = [ "@s" ];
+            };
+          };
+        };
+
         userChrome = ./userChrome.css;
-        # userChrome = ''
-        #   #TabsToolbar {
-        #     display: none !important;
-        #   }
-        # '';
       };
     };
   };

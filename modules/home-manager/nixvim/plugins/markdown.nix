@@ -1,9 +1,9 @@
 {
   programs.nixvim.plugins.render-markdown = {
-    enable = true;  
+    enable = true;
   };
   programs.nixvim.plugins.markdown-preview = {
-    enable = true;  
+    enable = true;
     settings = {
       browser = "firefox";
       port = "8080";

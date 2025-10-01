@@ -9,6 +9,7 @@
     ./telescope.nix
     ./markdown.nix
     ./floaterm.nix
+    ./easy-dotnet.nix
     # ./hardtime.nix
     ./lualine.nix
     ./neotree.nix

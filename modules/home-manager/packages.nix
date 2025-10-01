@@ -3,52 +3,53 @@
     pamixer
     brightnessctl
     pwvucontrol
-    ardour
     wireguard-tools
-    prismlauncher     # minecraft launcher
-    kitty             # kibty :3
+    prismlauncher # minecraft launcher
+    kitty # kibty :3
     telegram-desktop
-    firefox           # furryfox
+    firefox # furryfox
     vim
-    xfce.thunar       # i like thunar 
-    unzip             # штука для архивов 
-    vlc               # media player
-    feh               # image viewer
+    xfce.thunar # i like thunar
+    unzip # штука для архивов
+    vlc # media player
+    feh # image viewer
     htop
     krita
-    vesktop           # discord
-    libreoffice       # office 
-    audacity          # sound editor with graphical UI
+    vesktop # discord
+    libreoffice # office
+    audacity # sound editor with graphical UI
+    # qt6
     dig
-    tokei             # count your code
+    git-lfs
+    tokei # count your code
     glib
-    grc               # colorizer
+    grc # colorizer
     gcc
     gdb
     jdk
     go
-    nasm              # assmembly
-    fasm              # assmembly
+    nasm # assmembly
+    fasm # assmembly
     libnotify
     pkgs.dunst
-    swww              # wallpaper util
-    wttrbar           # thing for weather widget
-    pkgs.grim         # things for screenshot
-    pkgs.slurp        #
+    swww # wallpaper util
+    wttrbar # thing for weather widget
+    pkgs.grim # things for screenshot
+    pkgs.slurp #
     pkgs.wl-clipboard # screenshot tool
-    protoc-gen-go     # furry go code gen
+    protoc-gen-go # furry go code gen
     protobuf
     sqlc
     typescript
     nodejs_24
-    typescript-language-server
-    svelte-language-server
     tailwindcss-language-server
-    dotnetCorePackages.dotnet_8.sdk
-    csharp-ls
+    dotnetCorePackages.dotnet_9.sdk
+    cmake
+    raylib
 
-    # HATE THIS |
-    #           V 
-    #         aseprite
+    mysql84
+    mysql-workbench
+
+    # reaper # daw
   ];
 }
