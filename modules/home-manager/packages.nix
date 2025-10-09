@@ -18,10 +18,10 @@
     vesktop # discord
     libreoffice # office
     audacity # sound editor with graphical UI
-    # qt6
     dig
     git-lfs
     tokei # count your code
+
     glib
     grc # colorizer
     gcc
@@ -30,6 +30,7 @@
     go
     nasm # assmembly
     fasm # assmembly
+
     libnotify
     pkgs.dunst
     swww # wallpaper util
@@ -37,18 +38,19 @@
     pkgs.grim # things for screenshot
     pkgs.slurp #
     pkgs.wl-clipboard # screenshot tool
+
+
     protoc-gen-go # furry go code gen
     protobuf
-    sqlc
     typescript
     nodejs_24
-    tailwindcss-language-server
     dotnetCorePackages.dotnet_9.sdk
+    gnumake
     cmake
-    raylib
 
+    
     mysql84
-    mysql-workbench
+    sqlc
 
     # reaper # daw
   ];

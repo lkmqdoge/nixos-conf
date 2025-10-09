@@ -54,11 +54,11 @@
         mfact = 0.5;
       };
 
-      gestures = {
-        workspace_swipe = "on";
-        workspace_swipe_invert = "no";
-        workspace_swipe_cancel_ratio = 0.1;
-      };
+      # gestures = {
+      #   workspace_swipe = "on";
+      #   workspace_swipe_invert = "no";
+      #   workspace_swipe_cancel_ratio = 0.1;
+      # };
 
       misc = {
         disable_hyprland_logo = true;

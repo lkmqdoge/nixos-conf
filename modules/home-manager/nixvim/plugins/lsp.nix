@@ -43,6 +43,7 @@
         inlayHints = false; # is fucking hate it
         enable = true;
         servers = {
+          cmake.enable = true;
           jdtls.enable = true;
           tailwindcss.enable = true;
           omnisharp.enable = true;
