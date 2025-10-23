@@ -38,6 +38,9 @@
 
       # i hate this even MORE
       # lsp-lines.enable = true;
+      lspconfig = {
+        enable = true;
+      };
 
       lsp = {
         inlayHints = false; # is fucking hate it

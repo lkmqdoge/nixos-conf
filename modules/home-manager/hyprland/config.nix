@@ -3,9 +3,10 @@
     enable = true;
     settings = {
       monitor = ",preferred,auto,1";
+
       #autostart
       exec-once = [
-        "swww init &"
+        "swww-daemon &"
         "swww img ./../../../wallpaper/meowcafe.png &"
         "nm-applet --indicator &"
         "hyprctl setcursor Bibata-Modern-Ice 24 &"
