@@ -29,5 +29,6 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.permittedInsecurePackages = [
     "dotnet-sdk-6.0.428"
+    "ventoy-1.1.07"
   ];
 }

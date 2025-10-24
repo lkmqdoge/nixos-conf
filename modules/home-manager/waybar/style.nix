@@ -5,11 +5,11 @@
             font-family: FiraCode Nerd Font;
             min-height: 0;
             font-size: 14px;
-            color: rgb(200,250,200);
+            color: rgb(200, 250, 200);
         }
 
         window#waybar {
-            background-color: rgba(4,4,5,0.6);
+            background-color: rgba(4, 4, 5, 0.6);
             color: #ebdbb2;
         }
 
@@ -72,18 +72,18 @@
         }
 
         #clock {
-            padding-left: 6px;
+            padding-left:  6px;
             padding-right: 6px;
             border-radius: 6px 0px 0px 6px;
             background: #32302f;
         }
 
         #custom-power {
-          margin-right: 6px;
-          padding-right: 6px;
-          border-radius: 6px;
+          margin-right:    6px;
+          border-radius:   6px;
+          font-size:      20px;
           color: #458588;
-          background: #32302f;
+          background: #ffdfdf;
         }
 
         #custom-weather {
@@ -93,8 +93,8 @@
         }
 
         #pulseaudio {
-            margin-right: 6px;
-            padding-left: 6px;
+            margin-right : 6px;
+            padding-left : 6px;
             padding-right: 6px;
             border-radius: 6px;
             background: #32302f;

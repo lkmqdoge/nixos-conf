@@ -21,6 +21,8 @@
     dig
     git-lfs
     tokei # count your code
+    w3m
+    ventoy-full
 
     glib
     grc # colorizer

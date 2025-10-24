@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    greetd.tuigreet
+    tuigreet
   ];
   services = {
     xserver.enable = false;
