@@ -22,9 +22,11 @@
 
       treesitter-refactor = {
         enable = true;
-        highlightDefinitions = {
-          enable = true;
-          clearOnCursorMove = false;
+        settings = {
+          highlightDefinitions = {
+            enable = true;
+            clearOnCursorMove = false;
+          };
         };
       };
 
@@ -38,10 +40,6 @@
 
       # i hate this even MORE
       # lsp-lines.enable = true;
-      lspconfig = {
-        enable = true;
-      };
-
       lsp = {
         inlayHints = false; # is fucking hate it
         enable = true;

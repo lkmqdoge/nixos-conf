@@ -9,7 +9,8 @@
     telegram-desktop
     firefox # furryfox
     vim
-    xfce.thunar # i like thunar
+
+
     unzip # штука для архивов
     vlc # media player
     feh # image viewer
@@ -23,6 +24,7 @@
     tokei # count your code
     w3m
     ventoy-full
+    testdisk
 
     glib
     grc # colorizer

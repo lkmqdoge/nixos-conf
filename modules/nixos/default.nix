@@ -12,6 +12,7 @@
     ./boot.nix
     ./network.nix
     ./system.nix
+    ./thunar.nix
   ];
 
   environment.systemPackages = with pkgs; [

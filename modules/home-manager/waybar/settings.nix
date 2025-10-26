@@ -2,9 +2,25 @@
   programs.waybar.settings.mainBar = {
     layer = "top";
     position = "top";
-    modules-left = ["custom/power" "hyprland/workspaces" "hyprland/language" "network" "hyprland/window"];
-    modules-center = ["clock" "custom/weather"];
-    modules-right = ["pulseaudio" "custom/mem" "cpu" "backlight" "temperature" "battery" "tray"];
+    modules-left = [
+      "hyprland/workspaces"
+      "hyprland/language"
+      "network"
+      "hyprland/window"
+    ];
+
+    modules-center = [
+    ];
+    modules-right = [
+      "pulseaudio"
+      "custom/mem"
+      "cpu"
+      "backlight"
+      "temperature"
+      "battery"
+      "tray"
+      "clock"
+    ];
 
     "hyprland/workspaces" = {
       disable-scroll = true;
@@ -43,7 +59,7 @@
 
     clock = {
       tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-      format = "{:%a, %d %b, %I:%M %p}";
+      format-alt = "{:%d-%m-%Y}";
     };
 
     "custom/weather" = {
@@ -121,8 +137,8 @@
     };
 
     tray = {
-      "icon-size" = 16;
-      spacing = 0;
+      "icon-size" = 14;
+      spacing = 2;
     };
   };
 }

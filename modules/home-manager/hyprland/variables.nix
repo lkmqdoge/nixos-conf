@@ -1,4 +1,4 @@
-{...}: {
+{ pkgs, ...}: {
   home.sessionVariables = {
     NIXOS_OZONE_WL = "1";
     DISABLE_QT5_COMPAT = "0";
@@ -17,5 +17,6 @@
     CLUTTER_BACKEND = "wayland";
     GTK_THEME = "Gruvbox-Dark";
     DOTNET_CLI_TELEMETRY_OPTOUT = "1";
+    DEFAULT_BROWSER = "${pkgs.firefox}/bin/firefox";
   };
 }

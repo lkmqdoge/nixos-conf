@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ inputs, pkgs, ...}: {
   programs.firefox = {
     enable = true;
     profiles = {
@@ -40,6 +40,7 @@
           "browser.urlbar.suggest.addons" = true;
           "browser.urlbar.suggest.pocket" = false;
           "browser.urlbar.suggest.topsites" = false;
+          "browser.toolbars.bookmarks.visibility" = "always";
         };
 
         search = {
@@ -55,6 +56,9 @@
           };
         };
 
+        extensions.packages = with inputs.firefox-addons.packages.${pkgs.system}; [
+          ublock-origin 
+        ];
         userChrome = ./userChrome.css;
       };
     };

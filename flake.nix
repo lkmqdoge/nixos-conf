@@ -29,6 +29,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    firefox-addons = { 
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     prismlauncher = {
       url = "github:PrismLauncher/PrismLauncher";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -65,6 +70,29 @@
               useUserPackages = true;
               extraSpecialArgs = {inherit inputs;};
               users.lkmqdoge = import ./hosts/laptop/home.nix;
+            };
+          }
+        ];
+      };
+
+      # ну и хуйня я убью себя
+      desktop = nixpkgs.lib.nixosSystem rec {
+        specialArgs = {inherit self inputs;};
+        system = "x86_64-linux";
+
+        modules = [
+          ./hosts/desktop/configuration.nix
+          {
+            environment.systemPackages = [alejandra.defaultPackage.${system}];
+          }
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              extraSpecialArgs = {inherit inputs;};
+              users.lkmqdoge = import ./hosts/desktop/home.nix;
             };
           }
         ];

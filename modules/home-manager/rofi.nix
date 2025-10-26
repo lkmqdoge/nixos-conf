@@ -6,6 +6,6 @@
 
   programs.rofi = {
     enable = true;
-    theme = "paper-float";
+    theme = "Indego";
   };
 }

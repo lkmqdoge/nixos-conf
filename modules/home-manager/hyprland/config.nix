@@ -4,10 +4,9 @@
     settings = {
       monitor = ",preferred,auto,1";
 
-      #autostart
+      # autostart
       exec-once = [
-        "swww-daemon &"
-        "swww img ./../../../wallpaper/meowcafe.png &"
+        "swww-daemon &"                             # wallpaper 
         "nm-applet --indicator &"
         "hyprctl setcursor Bibata-Modern-Ice 24 &"
         "waybar &"
@@ -27,23 +26,25 @@
 
       general = {
         resize_on_border = true;
-        gaps_in = 1;
-        gaps_out = 1;
+        gaps_in = 4;
+        gaps_out = 2;
         border_size = 2;
-        "col.active_border" = "rgb(808080)";
+        "col.active_border"   = "rgb(808080)";
         "col.inactive_border" = "rgba(595959aa)";
         layout = "dwindle";
         allow_tearing = false;
       };
 
       decoration = {
-        rounding = 2;
+        rounding = 0;
         blur.enabled = false;
         # drop_shadow = false;
-        shadow.enabled = false;
+        shadow.enabled = true;
       };
 
-      animations.enabled = false;
+      animations = {
+        enabled = true;
+      };
 
       dwindle = {
         pseudotile = "yes";
@@ -62,6 +63,7 @@
       # };
 
       misc = {
+        focus_on_activate = true;
         disable_hyprland_logo = true;
         force_default_wallpaper = 0;
         vfr = true;
@@ -94,25 +96,40 @@
         "float,title:^(discord)$"
         "size 1600 900,title:^(discord)$"
 
+        "float,title:^(Discord Popout)$"
+        "size 640 360,title:^(Discord Popout)$"
+
+        "float,title:^(Media viewer)$"              # Telegram media viewer
+        "size 1600 900,title:^(Media viewer)$"
+
+
+        "float,title:^(Picture-in-Picture)$"        # firefox video thing
+        "size 640 360,title:^(Picture-in-Picture)$"
+
         "float,title:^(kitty)$"
         "size 1280 720,title:^(kitty)$"
       ];
 
       windowrulev2 = [
         "suppressevent maximize, class:.*"
+
         "float, class: (pwvucontrol)"
         "size 600 400, class: (pwvucontrol)"
         "move 58% 4%, class: (pwvucontrol)"
 
         "float, class: (thunar)"
         "size 1280 720, class: (thunar)"
+
+        "float, class: (feh)"
+        "size 1280 720, class: (feh)"
       ];
 
       "$mainMod" = "SUPER";
       bind = [
-        "$mainMod, T, exec, telegram-desktop"
-        "$mainMod, D, exec, discord"
+        "$mainMod, T, exec, Telegram"
+        "$mainMod, D, exec, vesktop"
         "$mainMod, Q, exec, kitty"
+
         "$mainMod, M, exec, hyprlock"
         "$mainMod, E, exec, thunar"
 
@@ -155,8 +172,8 @@
         "$mainMod SHIFT, 9, movetoworkspace, 9"
         "$mainMod SHIFT, 0, movetoworkspace, 10"
 
-        ",XF86AudioMute,         exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-        ",XF86AudioMicMute,      exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+        ",XF86AudioMute,      exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        ",XF86AudioMicMute,   exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
 
         "$mainMod CTRL, H, resizeactive, -60 0"
         "$mainMod CTRL, J, resizeactive, 0 60"
@@ -172,10 +189,13 @@
         "$mainMod, mouse_up, workspace, e-1"
 
         "$mainMod SHIFT, S, exec, grim -l 0 -g \"$(slurp)\" - | wl-copy"
-        "$mainMod SHIFT, H, exec, pkill -SIGUSR1 waybar"
+
+        "$mainMod CTRL, W,  exec, pkill -SIGUSR1 waybar"
         "$mainMod SHIFT, W, exec, pkill -SIGUSR2 waybar"
 
         "$mainMod, S, exec, rofi -show drun -show-icons"
+        "$mainMod SHIFT, F, exec, rofi -show window -show-icons" 
+        "$mainMod SHIFT, P, exec, rofi -show power-menu -modi power-menu:rofi-power-menu" 
       ];
 
       binde = [

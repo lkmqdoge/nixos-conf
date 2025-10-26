@@ -1,3 +1,3 @@
 {
-  programs.nixvim.plugins.tailwind-tools.enable = true;
+  # programs.nixvim.plugins.tailwind-tools.enable = true;
 }
