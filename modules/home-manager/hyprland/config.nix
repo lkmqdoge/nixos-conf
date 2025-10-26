@@ -1,6 +1,10 @@
 {...}: {
   wayland.windowManager.hyprland = {
     enable = true;
+    package = null;
+    portalPackage = null;
+    systemd.variables = ["--all"];
+
     settings = {
       monitor = ",preferred,auto,1";
 
