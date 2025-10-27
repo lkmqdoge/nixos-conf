@@ -36,12 +36,11 @@
     fasm # assmembly
 
     libnotify
-    pkgs.dunst
     swww # wallpaper util
     wttrbar # thing for weather widget
-    pkgs.grim # things for screenshot
-    pkgs.slurp #
-    pkgs.wl-clipboard # screenshot tool
+    grim # things for screenshot
+    slurp #
+    wl-clipboard # screenshot tool
 
 
     protoc-gen-go # furry go code gen
@@ -55,7 +54,6 @@
     
     mysql84
     sqlc
-
     # reaper # daw
   ];
 }

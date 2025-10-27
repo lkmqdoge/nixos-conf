@@ -1,17 +1,21 @@
 {
   imports = [
-    ./hyprland # window manager
+    ./hyprland 
     ./waybar
+    # ./hyprpanel
+
     ./nixvim
     ./firefox
     ./kitty
 
+    ./packages.nix
+
+    ./dunst.nix
     ./tmux.nix
     ./fish.nix
-    ./fonts.nix # fonts
-    ./gtk.nix # gtk theme
+    ./fonts.nix 
+    ./gtk.nix 
     ./rofi.nix
-    ./packages.nix
     ./godot.nix
     ./fastfetch.nix
     ./vscode.nix

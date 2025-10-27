@@ -1,4 +1,4 @@
-{...}: {
+{ ... }: {
   wayland.windowManager.hyprland = {
     enable = true;
     package = null;
@@ -14,8 +14,8 @@
         "nm-applet --indicator &"
         "hyprctl setcursor Bibata-Modern-Ice 24 &"
         "waybar &"
+        # "hyprpanel &"
         "hyprlock"
-        "dunst"
       ];
 
       input = {

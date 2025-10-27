@@ -8,7 +8,7 @@
     ./autoclose.nix
     ./telescope.nix
     ./markdown.nix
-    ./floaterm.nix
+    # ./floaterm.nix
     ./easy-dotnet.nix
     # ./hardtime.nix
     ./lualine.nix
