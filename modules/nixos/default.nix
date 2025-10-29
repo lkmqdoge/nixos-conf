@@ -2,7 +2,7 @@
   imports = [
     ./steam.nix
     ./otd.nix
-    ./mysql.nix
+    # ./mysql.nix
     ./security.nix
     ./login.nix
     ./sound.nix

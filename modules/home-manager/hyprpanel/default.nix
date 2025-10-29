@@ -1,4 +1,5 @@
 { ... }: {
+  # i really hate hyprpanel 
   programs.hyprpanel = {
     enable = true;
     settings = {

@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
+    ntfs3g
     pamixer
     brightnessctl
     pwvucontrol

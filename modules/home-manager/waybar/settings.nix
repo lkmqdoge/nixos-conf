@@ -77,7 +77,7 @@
 
     pulseaudio = {
       reverse-scrolling = 1;
-      format = "{volume}% {icon}  {format_source}";
+      format = "{volume}% {icon} {format_source}";
       format-bluetooth = "{volume}% {icon} {format_source}";
       format-bluetooth-muted = " {icon} {format_source}";
       format-muted = " MUTED";
@@ -93,7 +93,6 @@
         default = ["" "" ""];
       };
       on-click = "pwvucontrol";
-      min-length = 13;
     };
 
     "custom/mem" = {
