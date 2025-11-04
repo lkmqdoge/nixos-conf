@@ -1,24 +1,25 @@
 {
   imports = [
-    ./cellular-automaton.nix
-    ./tailwind-tools.nix
-    ./todo-comments.nix
-    ./vim-css-color.nix
-    ./ts-autotag.nix
     ./autoclose.nix
-    ./telescope.nix
-    ./markdown.nix
-    # ./floaterm.nix
-    ./easy-dotnet.nix
-    # ./hardtime.nix
-    ./lualine.nix
-    ./neotree.nix
+    ./cellular-automaton.nix
+    ./cmp.nix
     ./comment.nix
-    ./trouble.nix
+
+    ./easy-dotnet.nix
+    # ./floaterm.nix
     ./godot.nix
     ./goyo.nix
-    ./nix.nix
+    # ./hardtime.nix
     ./lsp.nix
-    ./cmp.nix
+    ./lualine.nix
+    ./markdown.nix
+    ./neotree.nix
+    ./nix.nix
+    ./tailwind-tools.nix
+    ./telescope.nix
+    ./todo-comments.nix
+    ./trouble.nix
+    ./ts-autotag.nix
+    ./vim-css-color.nix
   ];
 }
