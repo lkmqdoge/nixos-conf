@@ -1,11 +1,6 @@
 {
-  inputs,
-  config,
-  pkgs,
-  ...
-}: {
   imports = [
-    ../../modules/home-manager
+    ../../modules/homeManager
   ];
 
   home.username = "lkmqdoge";

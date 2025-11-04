@@ -8,12 +8,17 @@
     ../../modules/nixos
   ];
 
-  environment.systemPackages = with pkgs; [
-    acpi
+  modules.nixos.gaming.enable = false;
+  modules.nixos.useTablet.enable = false;
+  modules.nixos.system.useBluetooth.enable = true; # no adapter :(
+
+  environment.systemPackages = builtins.attrValues {
+    inherit (pkgs)
+    acpi # show battery status
     brightnessctl
     cpupower-gui
-    powertop
-  ];
+    powertop # tool for analyzing power consumption
+  ;};
 
   services = {
     power-profiles-daemon.enable = true;

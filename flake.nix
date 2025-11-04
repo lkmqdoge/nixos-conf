@@ -1,9 +1,16 @@
 {
-  description = "lkmqdoge's nixos config flake";
+  description = "lkmqdoge's nix configuration for NixOS";
+  
+  # the nixConfig here only affects the flake itself, not the system configuration
   nixConfig = {
-    extra-substituters = [ "https://nix-community.cachix.org" ];
-    extra-trusted-public-keys = [ "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs=" ];
+    extra-substituters = [
+      "https://nix-community.cachix.org"
+    ];
+    extra-trusted-public-keys = [
+      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+    ];
   };
+
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
@@ -35,23 +42,19 @@
   };
 
   outputs = inputs @ {
-    self,
+    self, # this flake
     nixpkgs,
     alejandra,
     home-manager,
     ...
   }: {
-    nixosConfigurations = {
-      laptop = nixpkgs.lib.nixosSystem rec {
+    nixosConfigurations = { # hostnames
+      laptop = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit self inputs;};
         system = "x86_64-linux";
 
         modules = [
           ./hosts/laptop/configuration.nix
-          {
-            environment.systemPackages = [alejandra.defaultPackage.${system}];
-          }
-
           home-manager.nixosModules.home-manager
           {
             home-manager = {
@@ -65,15 +68,12 @@
       };
 
       # ну и хуйня я убью себя
-      desktop = nixpkgs.lib.nixosSystem rec {
+      desktop = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit self inputs;};
         system = "x86_64-linux";
 
         modules = [
           ./hosts/desktop/configuration.nix
-          {
-            environment.systemPackages = [alejandra.defaultPackage.${system}];
-          }
 
           home-manager.nixosModules.home-manager
           {
