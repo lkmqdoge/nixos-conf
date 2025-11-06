@@ -10,5 +10,6 @@
     ./sound.nix
     ./system.nix
     ./user.nix
+    ./virtualization.nix
   ];
 }

@@ -34,5 +34,8 @@
     grim 
     slurp 
     wl-clipboard 
-  ;};
+
+    qbittorrent
+    ;
+  };
 }

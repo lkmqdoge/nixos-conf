@@ -10,7 +10,7 @@
 
   modules.nixos.gaming.enable = false;
   modules.nixos.useTablet.enable = false;
-  modules.nixos.system.useBluetooth.enable = true; # no adapter :(
+  modules.nixos.system.useBluetooth.enable = true; 
 
   environment.systemPackages = builtins.attrValues {
     inherit (pkgs)
