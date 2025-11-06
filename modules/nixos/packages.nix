@@ -3,6 +3,9 @@
   environment.variables.EDITOR = "nvim --clean";
   environment.systemPackages = builtins.attrValues {
     inherit (pkgs)
+    # core utils 
+    gnumake
+    just
 
     # editor
     neovim
@@ -16,16 +19,34 @@
     unrar
     unzip 
 
-    # tui internet browser
-    w3m  
+    # text proccesing
+    gnused # replacing text in files
+    sad # search and replace, just like sed, but with diff preview
+    jq
+    jc
 
-    # dead disk reading
-    testdisk
+    w3m # tui internet browser
+    testdisk # dead disk reading
 
-    dig
+    procs
+    btop
 
-    gnumake
+    # networking tools
+    tcpdump
+    nmap
+    mtr # a network diagnostic tool (traceroute)
+    gping # ping, but with graph
+    dnsutils # dig + nslookup
+    wget
+    curl
+    iperf3 # network performance test
 
-    home-manager;
+
+    home-manager
+
+    # misc 
+    tree
+    tealdeer # tldr
+    ;
   };
 }

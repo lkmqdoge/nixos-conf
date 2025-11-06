@@ -2,43 +2,33 @@
   home.packages = builtins.attrValues {
     inherit (pkgs)
 
-    pamixer
+    # https://github.com/nix-community/nix-melt
+    nix-melt # A TUI flake.lock viewer
+    # https://github.com/utdemir/nix-tree
+    nix-tree # A TUI to visualize the dependency graph of a nix derivation
 
-    # colorizer
-    grc 
-
+    grc  # colorizer
     glib
     libnotify
-    
+    pamixer
     pwvucontrol
       
     # minecraft launcher
     prismlauncher 
-
-    # terminal emulator
-    kitty 
-
+    kitty # terminal emulator
     telegram-desktop
     firefox
     krita
     vesktop 
     libreoffice
     audacity 
+    vlc # media player
+    feh # image viewer
+    btop # resource monitor
 
-    # media player
-    vlc
-
-    # image viewer
-    feh 
-
-    # resource monitor
-    btop
-    
-    # wallpapers
-    swww 
-    
-    # show weather 
-    wttrbar 
+    # desktop utils
+    swww # wallpapers
+    wttrbar # show weather 
 
     # things for screenshot
     grim 

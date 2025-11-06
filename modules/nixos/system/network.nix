@@ -1,8 +1,8 @@
 { pkgs, ... }:
 {
-  environment.systemPackages = builtins.attrValues {
-    inherit (pkgs) networkmanagerapplet;
-  };
+  environment.systemPackages = [
+    pkgs.networkmanagerapplet
+  ];
 
   networking = {
     hostName = "laptop";

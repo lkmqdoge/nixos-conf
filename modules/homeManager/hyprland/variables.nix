@@ -18,5 +18,7 @@
     GTK_THEME = "Gruvbox-Dark";
     DOTNET_CLI_TELEMETRY_OPTOUT = "1";
     DEFAULT_BROWSER = "${pkgs.firefox}/bin/firefox";
+
+    UV_PYTHON_DOWNLOADS="never";
   };
 }

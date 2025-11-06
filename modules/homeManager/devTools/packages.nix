@@ -1,25 +1,59 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
+let
+  inherit (lib) mkMerge;
+in
 {
-  home.packages = builtins.attrValues {
-    inherit (pkgs)
+  home.packages = mkMerge [
+    (builtins.attrValues {
+      inherit (pkgs)
 
-    # count your code
-    tokei 
+      tokei # count your code
+      jdk
+      protobuf
 
-    # toolchains
-    gcc
-    jdk
-    go
-    nasm 
-    fasm 
-    protoc-gen-go 
-    protobuf
-    typescript
-    nodejs_24
+      # nix
+      deadnix # finds and remove unused nix code
+      ;
+    })
 
-    cmake
-    gdb
-    ;
-    dotnet = pkgs.dotnetCorePackages.dotnet_9.sdk;
-  };
+    # python
+    (builtins.attrValues {
+      inherit (pkgs)
+      black # formatter
+      uv # project package manager
+      ;
+    })
+
+    # c/c++/asm
+    (builtins.attrValues {
+      inherit (pkgs)
+      gcc
+      nasm 
+      fasm 
+      cmake
+      gdb
+      ;
+    })
+
+    # golang
+    (builtins.attrValues {
+      inherit (pkgs)
+      go
+      protoc-gen-go
+      gotools
+      delve # go debugger
+      ;
+    })
+
+    # dotnet
+    ([pkgs.dotnetCorePackages.dotnet_9.sdk])
+
+    # Web development
+    (builtins.attrValues {
+      inherit (pkgs)
+      typescript
+      nodejs_24
+      ;
+    })
+  ];
 }

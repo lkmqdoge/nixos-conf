@@ -20,6 +20,12 @@
   system.stateVersion = "24.11";
 
   nixpkgs.config.allowUnfree = true;
+    
+  # needed for uv
+  environment.localBinInPath = true;
+
+  # fix dynamically linked executable
+  programs.nix-ld.enable = true;
 
   nixpkgs.config.permittedInsecurePackages = [
   ];
