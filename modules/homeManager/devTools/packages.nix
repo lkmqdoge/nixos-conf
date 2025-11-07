@@ -13,47 +13,30 @@ in
 
       # nix
       deadnix # finds and remove unused nix code
-      ;
-    })
 
-    # python
-    (builtins.attrValues {
-      inherit (pkgs)
+      # python
       black # formatter
       uv # project package manager
-      ;
-    })
 
-    # c/c++/asm
-    (builtins.attrValues {
-      inherit (pkgs)
+      # c/c++/asm
       gcc
       nasm 
       fasm 
       cmake
       gdb
-      ;
-    })
 
-    # golang
-    (builtins.attrValues {
-      inherit (pkgs)
+      # golang
       go
       protoc-gen-go
       gotools
       delve # go debugger
-      ;
-    })
 
-    # dotnet
-    ([pkgs.dotnetCorePackages.dotnet_9.sdk])
-
-    # Web development
-    (builtins.attrValues {
-      inherit (pkgs)
+      # Web development
       typescript
       nodejs_24
       ;
     })
+    # dotnet
+    ([pkgs.dotnetCorePackages.dotnet_9.sdk])
   ];
 }
