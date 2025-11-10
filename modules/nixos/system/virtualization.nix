@@ -1,11 +1,21 @@
 { pkgs, config, lib, ... }:
+let
+  cfg = config.modules.nixos.system.useVirtualisation;
+  inherit (lib) mkEnableOption mkIf;
+in
 {
-  services.flatpak.enable = true;
+    options.modules.nixos.system.useVirtualisation.enable
+    = mkEnableOption "Install packages for virtualisation";
 
-  environment.systemPackages = [
-    pkgs.steam-run
-    pkgs.bottles
-    pkgs.qemu
-    pkgs.quickemu
-  ];
+  config = mkIf cfg.enable {
+    services.flatpak.enable = true;
+    environment.systemPackages = builtins.attrValues {
+      inherit (pkgs)
+      steam-run
+      bottles
+      qemu
+      quickemu
+      ;
+    };
+  };
 }

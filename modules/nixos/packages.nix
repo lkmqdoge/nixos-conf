@@ -7,6 +7,8 @@
     gnumake
     just
 
+    ventoy
+
     # editor
     neovim
     vim
