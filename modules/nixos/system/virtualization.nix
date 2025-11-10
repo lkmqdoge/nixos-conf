@@ -14,6 +14,7 @@ in
       steam-run
       bottles
       qemu
+      wine
       quickemu
       ;
     };

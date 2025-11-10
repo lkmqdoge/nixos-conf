@@ -1,3 +1,4 @@
+{ pkgs, lib, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -10,4 +11,6 @@
   modules.nixos.useTablet.enable = true;
   modules.nixos.system.useBluetooth.enable = false; # no adapter :(
   modules.nixos.system.useVirtualisation.enable = true; 
+
+ 
 }
