@@ -35,12 +35,16 @@ in
     ]
     (builtins.attrValues {
       inherit (pkgs)
+      # games
+      pcsx2
 
       # osint
       sherlock
+
       # music
       audacity
       reaper
+      helm
     ;})
   ];
 }

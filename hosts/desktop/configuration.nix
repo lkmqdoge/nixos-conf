@@ -12,5 +12,5 @@
   modules.nixos.system.useBluetooth.enable = false; # no adapter :(
   modules.nixos.system.useVirtualisation.enable = true; 
 
- 
+  musnix.enable = true; 
 }
