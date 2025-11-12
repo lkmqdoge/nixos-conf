@@ -2,7 +2,7 @@
   programs.nixvim = {
     plugins = {
       treesitter-context = {
-        enable = true;
+        enable = false;
         settings = {
           mode = "topline";
         };

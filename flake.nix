@@ -30,6 +30,8 @@
     alejandra.url = "github:kamadorueda/alejandra/3.1.0";
     alejandra.inputs.nixpkgs.follows = "nixpkgs";
 
+    zapret-presets.url = "github:kotudemo/zapret-presets";
+
     musnix.url = "github:musnix/musnix";
   };
 
@@ -68,6 +70,7 @@
         modules = [
           ./hosts/desktop/configuration.nix
           inputs.musnix.nixosModules.musnix
+          inputs.zapret-presets.nixosModules.presets
 
           home-manager.nixosModules.home-manager
           {

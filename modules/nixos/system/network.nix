@@ -5,7 +5,7 @@
   ];
 
   networking = {
-    hostName = "laptop";
+    hostName = "nixos";
     networkmanager.enable = true;
   };
   
