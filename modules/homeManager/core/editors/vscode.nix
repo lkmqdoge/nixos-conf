@@ -1,35 +1,46 @@
 {pkgs, ...}: {
   programs.vscode = {
+    package = pkgs.vscodium;
+    enable = true;
     profiles.default = {
-      enable = true;
-      package = pkgs.vscode;
-
       userSettings = {
         "editor.minimap.enabled" = false;
-        "workbench.colorTheme" = "GitHub Dark High Contrast";
+        "workbench.colorTheme" = "Dark Modern";
         "workbench.editor.pinnedTabsOnSeparateRow" = true;
         "window.density.editorTabHeight" = "compact";
         "workbench.editor.empty.hint" = "hidden";
         "workbench.activityBar.location" = "top";
-        "editor.glyphMargin" = false;
+        "editor.glyphMargin" = true;
         "editor.fontLigatures"= true;
         "editor.letterSpacing" = 0.7;
         "editor.fontFamily" = "JetBrainsMono Nerd Font";
         "C_Cpp.inlayHints.parameterNames.suppressWhenArgumentContainsName" = false;
         "C_Cpp.inlayHints.parameterNames.hideLeadingUnderscores" = false;
         "editor.inlayHints.enabled" = "off";
+        "explorer.confirmDelete" = false;
       };
 
       extensions = with pkgs.vscode-extensions; [
-        bbenoist.nix
-        oops418.nix-env-picker
         jdinhlife.gruvbox
         github.github-vscode-theme
-        vscodevim.vim
-        ms-dotnettools.csdevkit
+
+        bbenoist.nix
+        mkhl.direnv
+
+        # dotnet
+        # csharpier.csharpier-vscode # formatter
+
+        # c/c++
         ms-vscode.cpptools-extension-pack
-        twxs.cmake
         ms-vscode.cmake-tools
+        twxs.cmake
+      ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+        {
+          name = "vscode-avalonia";
+          publisher = "AvaloniaTeam";
+          version = "0.0.32";
+          sha256 = "2OpZOltD+4i9tUmk0tTDDdEEhffCvHMAQ6BcsA+2Ou8=";
+        }
       ];
     };
   };

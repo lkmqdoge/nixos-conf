@@ -13,6 +13,7 @@ in
 
       # nix
       deadnix # finds and remove unused nix code
+      nurl # cli tool to generate Nix fetcher calls from repository URLs
 
       # python
       black # formatter

@@ -4,7 +4,13 @@
       lkmqdoge = {
         isNormalUser = true;
         description = "lkmqdoge";
-        extraGroups = ["networkmanager" "wheel" "audio" "input"];
+        extraGroups = [
+          "networkmanager"
+          "wheel"
+          "audio"
+          "input"
+        ];
+
         shell = pkgs.fish;
         uid = 1000;
       };
