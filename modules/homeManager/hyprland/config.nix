@@ -200,6 +200,9 @@
         "$mainMod, S, exec, rofi -show drun -show-icons"
         "$mainMod SHIFT, F, exec, rofi -show window -show-icons" 
         "$mainMod SHIFT, P, exec, rofi -show power-menu -modi power-menu:rofi-power-menu" 
+
+        # passing input to apps
+        "CTRL SHIFT, M, pass, class:^(vesktop)$"
       ];
 
       binde = [
