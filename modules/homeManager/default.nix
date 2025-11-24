@@ -12,7 +12,5 @@
     ./mpv
     ./rofi
     ./waybar
-
-    ./packages.nix
   ];
 }
