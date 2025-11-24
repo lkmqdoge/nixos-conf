@@ -8,10 +8,7 @@
     ../../modules/nixos
   ];
 
-  modules.nixos.gaming.enable = false;
-  modules.nixos.useTablet.enable = false;
   modules.nixos.system.useBluetooth.enable = true; 
-  modules.nixos.system.useVirtualisation.enable = false;
 
   environment.systemPackages = builtins.attrValues {
     inherit (pkgs)

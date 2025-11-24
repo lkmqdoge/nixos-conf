@@ -1,12 +1,10 @@
 {
   imports = [
-    ./db
+    ./core
     ./de
     ./gaming
     ./otd
     ./system
     ./thunar
-
-    ./packages.nix
   ];
 }

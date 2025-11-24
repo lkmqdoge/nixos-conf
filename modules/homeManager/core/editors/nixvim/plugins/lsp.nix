@@ -1,12 +1,13 @@
 {
   programs.nixvim = {
     plugins = {
-      treesitter-context = {
-        enable = false;
-        settings = {
-          mode = "topline";
-        };
-      };
+      # i HATe thiS
+      # treesitter-context = {
+      #   enable = false;
+      #   settings = {
+      #     mode = "topline";
+      #   };
+      # };
 
       treesitter = {
         folding = true;
@@ -30,8 +31,7 @@
         };
       };
 
-      # csharp lsp 
-      roslyn.enable = true;
+      roslyn.enable = true; # csharp
 
       # i hate this >:(
       # lsp-signature = {
@@ -45,30 +45,17 @@
         enable = true;
         servers = {
 
+          just.enable = true;
           cmake.enable = true;
           clangd.enable = true;
-          
-          # java
-          jdtls.enable = true;
-
-          # c#
-
+          jdtls.enable = true;   # java
           pyright.enable = true;
-
-          # protobuf
-          protols.enable = true;
-
-          # nix
-          nil_ls.enable = true;
-
+          protols.enable = true; # protobuf
+          nil_ls.enable = true;  # nix
           svelte.enable = true;
-
           jsonls.enable = true;
-
           cssls.enable = true;
-
           html.enable = true;
-
           tailwindcss.enable = true;
 
           # go

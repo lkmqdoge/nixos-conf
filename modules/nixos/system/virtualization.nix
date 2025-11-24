@@ -7,6 +7,7 @@ in
   options.modules.nixos.system.useVirtualisation.enable
     = mkEnableOption "Install packages for virtualisation";
 
+
   config = mkIf cfg.enable {
     virtualisation = {
       libvirtd = {
@@ -18,7 +19,9 @@ in
       spiceUSBRedirection.enable = true;
     };
     services.spice-vdagentd.enable = true;
+
     users.groups.libvirtd.members = [ "lkmqdoge" ];
+
 
     programs.dconf.enable = true;
     programs.virt-manager.enable = true;
@@ -30,7 +33,7 @@ in
       virtio-win
       win-spice
       adwaita-icon-theme
-
+      
       # sandboxing
       wine64
       steam-run

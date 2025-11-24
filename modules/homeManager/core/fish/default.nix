@@ -3,6 +3,7 @@
     enable = true;
 
     interactiveShellInit = ''
+      set -g fish_escape_delay_ms 30
       set fish_greeting "When in doubt, fish! ><>"
     '';
 
@@ -34,6 +35,8 @@
       "nv"  = "nvim";
       "nvl" = "nvim --listen 127.0.0.1:55432 .";
       "ndv" = "nix develop --command fish";
+      "tm"  = "tmux";
+      "tma" = "tmux attach";
     };
   };
 }

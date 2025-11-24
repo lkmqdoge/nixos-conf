@@ -15,7 +15,10 @@ in
     };
     hardware.xone.enable = true; # support for the xbox controller USB dongle
     environment.systemPackages = mkMerge [
-      (builtins.attrValues { inherit (pkgs) r2modman protonup-ng; })
+      (builtins.attrValues { inherit (pkgs)
+        r2modman 
+        protonup-ng
+      ;})
       (mkIf tcfg.enable [pkgs.osu-lazer-bin])
     ];
 

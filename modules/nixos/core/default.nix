@@ -1,6 +1,14 @@
 { pkgs, ... }:
 {
-  environment.variables.EDITOR = "nvim --clean";
+  # enable docker
+  virtualisation = {
+    docker = {
+      enable = true;
+    };
+    podman.enable = true;
+  };
+  users.groups.docker.members = [ "lkmqdoge" ];
+
   environment.systemPackages = builtins.attrValues {
     inherit (pkgs)
     # core utils 
@@ -23,11 +31,11 @@
 
     # text proccesing
     gnused # replacing text in files
-    sad # search and replace, just like sed, but with diff preview
+    sad    # search and replace, just like sed, but with diff preview
     jq
     jc
 
-    w3m # tui internet browser
+    w3m      # tui internet browser
     testdisk # dead disk reading
 
     procs
