@@ -23,6 +23,7 @@
 
     # vcs
     git
+    gh # github cli tool
     git-lfs
 
     # archives

@@ -8,6 +8,13 @@
       #     mode = "topline";
       #   };
       # };
+      # i hate this >:(
+      # lsp-signature = {
+      #   enable = true;
+      # };
+
+      # i hate this even MORE
+      # lsp-lines.enable = true;
 
       treesitter = {
         folding = true;
@@ -33,13 +40,6 @@
 
       roslyn.enable = true; # csharp
 
-      # i hate this >:(
-      # lsp-signature = {
-      #   enable = true;
-      # };
-
-      # i hate this even MORE
-      # lsp-lines.enable = true;
       lsp = {
         inlayHints = false; # is fucking hate it
         enable = true;
@@ -75,7 +75,7 @@
             };
           };
 
-          # gdshader_lsp.enable = true; не работает
+          # gdshader_lsp.enable = true;
           gdscript = {
             enable = true;
             package = null;

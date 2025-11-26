@@ -37,7 +37,11 @@ in
       nodejs_24
       ;
     })
+
     # dotnet
-    ([pkgs.dotnetCorePackages.dotnet_9.sdk])
+    ([
+      pkgs.dotnetCorePackages.dotnet_9.sdk
+      pkgs.netcoredbg
+    ])
   ];
 }

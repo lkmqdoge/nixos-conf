@@ -37,7 +37,6 @@ in
       obsidian # note taking app
       vlc # media player
       feh # image viewer
-      qimgv # better image viewer
       btop # resource monitor
 
       # desktop utils
