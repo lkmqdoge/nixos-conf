@@ -14,7 +14,7 @@
           goto_bottom = "";
         };
 
-        symbol = "|";
+        symbol = ">";
       };
     };
 

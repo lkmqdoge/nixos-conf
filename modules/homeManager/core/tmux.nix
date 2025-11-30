@@ -12,6 +12,7 @@
       }
       {
         plugin = tmuxPlugins.prefix-highlight;
+        extraConfig = "set -g status-right '#{prefix_highlight} | %a %Y-%m-%d %H:%M'";
       }
       {
         plugin = tmuxPlugins.resurrect;
