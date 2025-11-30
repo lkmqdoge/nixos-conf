@@ -10,6 +10,7 @@
     ./easy-dotnet.nix
     ./fidget.nix
     # ./floaterm.nix
+    ./gitsigns.nix
     ./godot.nix
     ./goyo.nix
     # ./hardtime.nix
