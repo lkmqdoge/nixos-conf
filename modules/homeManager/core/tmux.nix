@@ -3,12 +3,16 @@
     enable = true;
     mouse = true;
     keyMode = "vi";
-    escapeTime = 50; # change escape time for better fish vi mode
+    escapeTime = 0; # change escape time for better fish vi mode
     shell = "${pkgs.fish}/bin/fish";
 
     plugins = with pkgs; [
-
-      tmuxPlugins.cpu
+      {
+        plugin = tmuxPlugins.vim-tmux-navigator;
+      }
+      {
+        plugin = tmuxPlugins.prefix-highlight;
+      }
       {
         plugin = tmuxPlugins.resurrect;
         extraConfig = "set -g @resurrect-strategy-nvim 'session'";
@@ -22,5 +26,11 @@
       }
 
     ];
+
+    extraConfig = ''
+      set-option -g pane-border-lines double
+      set-option -g pane-border-indicators arrows
+      set-option -g pane-border-status top
+    '';
   };
 }

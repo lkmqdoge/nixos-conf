@@ -32,7 +32,7 @@ in
       telegram-desktop
       firefox
       krita
-      vesktop 
+      discord
       libreoffice
       obsidian # note taking app
       vlc # media player

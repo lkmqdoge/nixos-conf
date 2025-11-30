@@ -38,11 +38,21 @@
         };
       };
 
-      roslyn.enable = true; # csharp
+      # roslyn.enable = true; # use easy-dotnet instead
 
       lsp = {
         inlayHints = false; # is fucking hate it
         enable = true;
+
+        keymaps.lspBuf = {
+          K = "hover";
+          gD = "references";
+          gd = "definition";
+          gi = "implementation";
+          gt = "type_definition";
+        };
+
+
         servers = {
 
           just.enable = true;

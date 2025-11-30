@@ -131,7 +131,7 @@
       "$mainMod" = "SUPER";
       bind = [
         "$mainMod, T, exec, Telegram"
-        "$mainMod, D, exec, vesktop"
+        "$mainMod, D, exec, discord"
         "$mainMod, Q, exec, kitty"
 
         "$mainMod, M, exec, hyprlock"
@@ -202,7 +202,7 @@
         "$mainMod SHIFT, P, exec, rofi -show power-menu -modi power-menu:rofi-power-menu" 
 
         # passing input to apps
-        "CTRL SHIFT, M, pass, class:^(vesktop)$"
+        "CTRL SHIFT, M, pass, class:^(discord)$"
       ];
 
       binde = [
