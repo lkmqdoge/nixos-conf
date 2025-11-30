@@ -4,6 +4,7 @@
     ./cellular-automaton.nix
     ./cmp.nix
     ./comment.nix
+    ./dap.nix
 
     ./easy-dotnet.nix
     # ./floaterm.nix
@@ -15,6 +16,7 @@
     ./markdown.nix
     ./neotree.nix
     ./nix.nix
+    ./surround.nix
     ./tailwind-tools.nix
     ./telescope.nix
     ./todo-comments.nix

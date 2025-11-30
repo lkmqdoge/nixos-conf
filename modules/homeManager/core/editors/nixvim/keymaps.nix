@@ -43,7 +43,17 @@
           "<C-Down>" = ":resize +2<CR>";
           "<C-Left>" = ":vertical resize +2<CR>";
           "<C-Right>" = ":vertical resize -2<CR>";
-
+          
+          # dap
+          "<F5>" =  ":lua require'dap'.continue()<CR>";
+          "<F10>" = ":lua require'dap'.step_over()<CR>";
+          "<F11>" = ":lua require'dap'.step_into()<CR>";
+          "<F12>" = ":lua require'dap'.step_out()<CR>";
+          "<Leader>b" = ":lua require'dap'.toggle_breakpoint()<CR>";
+          "<Leader>B" = ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>";
+          "<Leader>lp" = ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>";
+          "<Leader>dr" = ":lua require'dap'.repl.open()<CR>";
+          "<Leader>dl" = ":lua require'dap'.run_last()<CR>";
         };
       visual =
         lib.mapAttrsToList
