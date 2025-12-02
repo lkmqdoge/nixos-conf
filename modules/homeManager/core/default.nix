@@ -7,6 +7,7 @@ in
     ./editors
     ./fish
 
+    ./mc.nix
     ./tmux.nix
     ./yazi.nix
   ];

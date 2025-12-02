@@ -30,9 +30,8 @@
     alejandra.url = "github:kamadorueda/alejandra/3.1.0";
     alejandra.inputs.nixpkgs.follows = "nixpkgs";
 
-    zapret-presets.url = "github:kotudemo/zapret-presets";
-
     musnix.url = "github:musnix/musnix";
+
   };
 
   outputs = inputs @ {
@@ -41,7 +40,8 @@
     alejandra,
     home-manager,
     ...
-  }: {
+    }:
+    {
     nixosConfigurations = { # hostnames
       laptop = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit self inputs;};
@@ -49,7 +49,6 @@
 
         modules = [
           ./hosts/laptop/configuration.nix
-
           home-manager.nixosModules.home-manager
           {
             home-manager = {
@@ -70,8 +69,6 @@
         modules = [
           ./hosts/desktop/configuration.nix
           inputs.musnix.nixosModules.musnix
-          inputs.zapret-presets.nixosModules.presets
-
           home-manager.nixosModules.home-manager
           {
             home-manager = {

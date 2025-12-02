@@ -14,6 +14,7 @@
     # core utils 
     gnumake
     just
+    fd # simple and fast alternative to find
 
     ventoy
 

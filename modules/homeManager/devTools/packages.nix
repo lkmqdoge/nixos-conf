@@ -1,6 +1,21 @@
 { pkgs, lib, ... }:
 let
   inherit (lib) mkMerge;
+
+  buildDotnetGlobalTool = pkgs.dotnetCorePackages.buildDotnetGlobalTool;
+  easy-dotnet = buildDotnetGlobalTool {
+    pname = "EasyDotnet";
+    executables = [ "dotnet-easydotnet" ]; 
+    version = "2.3.30";
+    nugetHash = "sha256-nlc7vKdf91EZGFtn7AIzefsTpLNMXRHPIr0JITPtKkE=";
+
+    meta = {
+      description = "Easy Dotnet Server is the lightweight C# JSON-RPC server powering the easy-dotnet.nvim Neovim plugin";
+      homepage = "https://github.com/GustavEikaas/easy-dotnet-server";
+      license = lib.licenses.mit;
+      platforms = lib.platforms.linux;
+    };
+  };
 in
 {
   home.packages = mkMerge [
@@ -42,6 +57,8 @@ in
     ([
       pkgs.dotnetCorePackages.dotnet_9.sdk
       pkgs.netcoredbg
+      pkgs.dotnet-ef
+      easy-dotnet
     ])
   ];
 }

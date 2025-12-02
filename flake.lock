@@ -213,22 +213,6 @@
         "type": "github"
       }
     },
-    "hostlists": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1758137273,
-        "narHash": "sha256-ObCo3e+5VeUgY5J/NH2Ka7x9FC/a2z4Y/2y00XweN20=",
-        "owner": "Snowy-Fluffy",
-        "repo": "zapret.cfgs",
-        "rev": "52e1b547c6e9ac96836b09eab89f3e9edb7bb69b",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Snowy-Fluffy",
-        "repo": "zapret.cfgs",
-        "type": "github"
-      }
-    },
     "hyprcursor": {
       "inputs": {
         "hyprlang": [
@@ -600,22 +584,6 @@
         "type": "github"
       }
     },
-    "nixpkgs_4": {
-      "locked": {
-        "lastModified": 1758427187,
-        "narHash": "sha256-pHpxZ/IyCwoTQPtFIAG2QaxuSm8jWzrzBGjwQZIttJc=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "554be6495561ff07b6c724047bdd7e0716aa7b46",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixvim": {
       "inputs": {
         "flake-parts": "flake-parts",
@@ -732,8 +700,7 @@
         "musnix": "musnix",
         "nixpkgs": "nixpkgs_3",
         "nixvim": "nixvim",
-        "prismlauncher": "prismlauncher",
-        "zapret-presets": "zapret-presets"
+        "prismlauncher": "prismlauncher"
       }
     },
     "rust-analyzer-src": {
@@ -836,25 +803,6 @@
       "original": {
         "owner": "hyprwm",
         "repo": "xdg-desktop-portal-hyprland",
-        "type": "github"
-      }
-    },
-    "zapret-presets": {
-      "inputs": {
-        "hostlists": "hostlists",
-        "nixpkgs": "nixpkgs_4"
-      },
-      "locked": {
-        "lastModified": 1760267658,
-        "narHash": "sha256-VBVUeMHNlm7Qz2amFY7vL9wyPcwCkhCsOUukSn/9UXQ=",
-        "owner": "kotudemo",
-        "repo": "zapret-presets",
-        "rev": "c3c2bf5a9a9e96b9bf546603b80b1fe3d4adbcb6",
-        "type": "github"
-      },
-      "original": {
-        "owner": "kotudemo",
-        "repo": "zapret-presets",
         "type": "github"
       }
     }
