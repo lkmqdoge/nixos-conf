@@ -6,9 +6,9 @@ in
   imports = [
     ./editors
     ./fish
-
-    ./mc.nix
+    
     ./tmux.nix
+    ./vifm.nix
     ./yazi.nix
   ];
 
@@ -22,7 +22,6 @@ in
       nix-tree # A TUI to visualize the dependency graph of a nix derivation
 
 
-      grc  # colorizer
       glib
       libnotify
       pamixer
@@ -35,14 +34,16 @@ in
       krita
       discord
       libreoffice
-      obsidian # note taking app
-      vlc # media player
-      feh # image viewer
       btop # resource monitor
 
       # desktop utils
       swww # wallpapers
       wttrbar # show weather 
+
+      # media
+      vlc # media player
+      feh # image viewer
+      ffmpeg
 
       # things for screenshot
       grim 
@@ -50,6 +51,10 @@ in
       wl-clipboard 
 
       qbittorrent
+
+      grc  # colorizer
+      delta # better git pager
+      bat # better cat
       ;
     })
   ];

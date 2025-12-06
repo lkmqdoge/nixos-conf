@@ -1,7 +1,7 @@
 {
   programs.nixvim.plugins = {
     mini-indentscope = {
-      enable = true;
+      enable = false;
       settings = {
         draw = {
           delay = 0;

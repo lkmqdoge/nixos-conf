@@ -18,7 +18,10 @@
         })
         {
           # Open Neotree
-          "<leader>n" = ":Neotree<CR>";
+          "<leader>p" = ":Neotree<CR>";
+
+          # Open Vifm
+          "<leader>n" = ":Vifm<CR>";
 
           # Esc to clear search results
           "<esc>" = ":noh<CR>";
@@ -54,6 +57,13 @@
           "<Leader>lp" = ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>";
           "<Leader>dr" = ":lua require'dap'.repl.open()<CR>";
           "<Leader>dl" = ":lua require'dap'.run_last()<CR>";
+
+          # picker
+          "<leader>ff" = ":lua Snacks.picker.files()<CR>";
+          "<leader>fg" = ":lua Snacks.picker.grep()<CR>";
+          "<leader>fm" = ":lua Snacks.picker.marks()<CR>";
+          "<leader>cc" = ":lua Snacks.picker.colorschemes()<CR>";
+
         };
       visual =
         lib.mapAttrsToList

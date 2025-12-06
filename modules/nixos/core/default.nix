@@ -15,6 +15,7 @@
     gnumake
     just
     fd # simple and fast alternative to find
+    ripgrep
 
     ventoy
 

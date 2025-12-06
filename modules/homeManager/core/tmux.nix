@@ -30,8 +30,6 @@
 
     extraConfig = ''
       set-option -g pane-border-lines double
-      set-option -g pane-border-indicators arrows
-      set-option -g pane-border-status top
       set-option -g default-terminal "screen-256color"
     '';
   };
