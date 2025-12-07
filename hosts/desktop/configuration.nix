@@ -21,6 +21,9 @@ in
 
   musnix.enable = true; 
 
+  hardware.graphics.enable = true;
+  hardware.graphics.enable32Bit = true;
+
   services.zapret = {
     enable = false;
     udpSupport = true;
