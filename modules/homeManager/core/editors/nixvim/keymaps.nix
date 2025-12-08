@@ -18,10 +18,10 @@
         })
         {
           # Open Neotree
-          "<leader>p" = ":Neotree<CR>";
+          "<leader>n" = ":Neotree<CR>";
 
           # Open Vifm
-          "<leader>n" = ":Vifm<CR>";
+          "<leader>p" = ":Vifm<CR>";
 
           # Esc to clear search results
           "<esc>" = ":noh<CR>";

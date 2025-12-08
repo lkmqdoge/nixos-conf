@@ -3,14 +3,15 @@
     enable = true;
 
     settings = {
-      bigfile.enabled = false;
-      dashboard.enabled = false;
-      explorer.enabled = false;
       indent.enabled = true;
-      input.enabled = false;
       picker = {
         enabled = true;
       };
+      explorer.enabled = true;
+
+      bigfile.enabled = false;
+      dashboard.enabled = false;
+      input.enabled = false;
       notifier.enabled = false;
       quickfile.enabled = false;
       scope.enabled = false;
