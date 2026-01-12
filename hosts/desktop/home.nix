@@ -28,6 +28,7 @@ in
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
   home.packages = mkMerge [
     [
       openUtauWrapper 
@@ -35,11 +36,10 @@ in
     ]
     (builtins.attrValues {
       inherit (pkgs)
-      # games
       pcsx2
 
-      # osint
-      sherlock
+      blender
+      tuxpaint
 
       # music
       audacity

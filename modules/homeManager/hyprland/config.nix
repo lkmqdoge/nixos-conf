@@ -42,7 +42,6 @@
       decoration = {
         rounding = 0;
         blur.enabled = false;
-        # drop_shadow = false;
         shadow.enabled = true;
       };
 
@@ -131,7 +130,7 @@
       "$mainMod" = "SUPER";
       bind = [
         "$mainMod, T, exec, Telegram"
-        "$mainMod, D, exec, discord"
+        "$mainMod, D, exec, vesktop"
         "$mainMod, Q, exec, kitty"
 
         "$mainMod, M, exec, hyprlock"
@@ -202,6 +201,7 @@
         "$mainMod SHIFT, P, exec, rofi -show power-menu -modi power-menu:rofi-power-menu" 
 
         # passing input to apps
+        "CTRL SHIFT, M, pass, class:^(vesktop)$"
         "CTRL SHIFT, M, pass, class:^(discord)$"
       ];
 

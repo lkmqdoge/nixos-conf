@@ -38,7 +38,7 @@
         };
       };
 
-      # roslyn.enable = true; # use easy-dotnet instead
+      roslyn.enable = true;
 
       lsp = {
         inlayHints = false; # is fucking hate it

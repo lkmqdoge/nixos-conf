@@ -36,6 +36,7 @@ in
       
       # sandboxing
       wine64
+      winetricks
       steam-run
     ];
 

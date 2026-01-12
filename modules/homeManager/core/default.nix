@@ -27,8 +27,9 @@ in
       pamixer
       pwvucontrol
         
-      prismlauncher # minecraft launcher
-      kitty # terminal emulator
+      readest           # modern ebook reader
+      prismlauncher     # minecraft launcher
+      kitty             # terminal emulator
       telegram-desktop
       firefox
       krita

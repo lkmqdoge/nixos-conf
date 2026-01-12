@@ -13,10 +13,13 @@ in
       enable = true;
       remotePlay.openFirewall = true;
     };
-    hardware.xone.enable = true; # support for the xbox controller USB dongle
+    hardware.steam-hardware.enable = true;
+    hardware.xpadneo.enable = true; # xbox wireless controller
     environment.systemPackages = mkMerge [
       (builtins.attrValues { inherit (pkgs)
+        lutris
         r2modman 
+        mangohud
         protonup-ng
       ;})
       (mkIf tcfg.enable [pkgs.osu-lazer-bin])

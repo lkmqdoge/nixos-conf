@@ -4,11 +4,8 @@
 
     settings = {
       indent.enabled = true;
-      picker = {
-        enabled = true;
-      };
-      explorer.enabled = true;
-
+      picker.enabled = true;
+      explorer.enabled = false;
       bigfile.enabled = false;
       dashboard.enabled = false;
       input.enabled = false;
