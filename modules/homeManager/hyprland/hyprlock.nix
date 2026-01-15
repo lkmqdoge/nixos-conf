@@ -88,7 +88,7 @@ in {
       color = rgba(235, 219, 178, .9)
       font_color = rgba(235, 219, 178, .9)
       fade_on_empty = false
-      placeholder_text = <i><span foreground="##ebdbb2e5">Enter Password</span></i>
+      placeholder_text = <i><span foreground="##ebdbb2e5">all panic no disco</span></i>
       hide_input = false
       position = 0, -300
       halign = center

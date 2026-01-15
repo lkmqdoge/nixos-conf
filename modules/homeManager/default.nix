@@ -9,7 +9,6 @@
     ./gtk
     ./hyprland
     ./kitty
-    ./mpv
     ./rofi
     ./waybar
   ];
