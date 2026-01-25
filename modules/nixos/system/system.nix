@@ -27,9 +27,4 @@
 
   # fix dynamically linked executable
   programs.nix-ld.enable = true;
-
-
-  nixpkgs.config.permittedInsecurePackages = [
-    "ventoy-1.1.07"
-  ];
 }

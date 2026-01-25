@@ -22,9 +22,9 @@ in
       telegram-desktop  # fuck this app
       feh               # image viewer
       pwvucontrol       # sound control
-      hakuneko          # anime/manga downloader
       qbittorrent
       mpv
+      vlc
       firefox
       krita
       discord

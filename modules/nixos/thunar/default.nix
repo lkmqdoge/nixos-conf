@@ -3,7 +3,7 @@
   programs.xfconf.enable = true;
 
   programs.thunar.plugins = builtins.attrValues {
-    inherit (pkgs.xfce) 
+    inherit (pkgs) 
 
     thunar-archive-plugin
     thunar-vcs-plugin;

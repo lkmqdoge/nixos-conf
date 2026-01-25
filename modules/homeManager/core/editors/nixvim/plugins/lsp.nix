@@ -17,8 +17,8 @@
       # lsp-lines.enable = true;
 
       treesitter = {
-        folding = true;
         enable = true;
+        folding.enable = true;
         settings = {
           indent.enable = true;
           highlight = {
@@ -28,16 +28,16 @@
         };
       };
 
-      treesitter-refactor = {
-        enable = true;
-        settings = {
-          highlightDefinitions = {
-            enable = true;
-            clearOnCursorMove = false;
-          };
-        };
-      };
-
+      # treesitter-refactor = {
+      #   enable = true;
+      #   settings = {
+      #     highlightDefinitions = {
+      #       enable = true;
+      #       clearOnCursorMove = false;
+      #     };
+      #   };
+      # };
+      #
       roslyn.enable = true;
 
       lsp = {

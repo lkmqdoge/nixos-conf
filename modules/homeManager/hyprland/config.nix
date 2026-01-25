@@ -1,4 +1,4 @@
-{ ... }: {
+{ lib, ... }: {
   wayland.windowManager.hyprland = {
     enable = true;
     package = null;
@@ -85,46 +85,39 @@
       };
 
       windowrule = [
-        "float,title:^(Open File)(.*)$"
-        "float,title:^(Select a File)(.*)$"
-        "float,title:^(Choose wallpaper)(.*)$"
-        "float,title:^(Open Folder)(.*)$"
-        "float,title:^(Save As)(.*)$"
-        "float,title:^(Library)(.*)$"
-        "float,title:^(File Upload)(.*)$"
-
-        "size 1280 960,title:^(org.telegram.desktop)$"
-        "float,title:^(org.telegram.desktop)$"
-
-        "float,title:^(discord)$"
-        "size 1600 900,title:^(discord)$"
-
-        "float,title:^(Discord Popout)$"
-        "size 640 360,title:^(Discord Popout)$"
-
-        "float,title:^(Media viewer)$"              # Telegram media viewer
-        "size 1600 900,title:^(Media viewer)$"
-
-
-        "float,title:^(Picture-in-Picture)$"        # firefox video thing
-        "size 640 360,title:^(Picture-in-Picture)$"
-
-        "float,title:^(kitty)$"
-        "size 1280 720,title:^(kitty)$"
-      ];
-
-      windowrulev2 = [
-        "suppressevent maximize, class:.*"
-
-        "float, class: (pwvucontrol)"
-        "size 600 400, class: (pwvucontrol)"
-        "move 58% 4%, class: (pwvucontrol)"
-
-        "float, class: (thunar)"
-        "size 1280 720, class: (thunar)"
-
-        "float, class: (feh)"
-        "size 1280 720, class: (feh)"
+        "float on, match:title ^(Open File)(.*)$"
+        "size 800 600, match:title ^(Open File)(.*)$"
+        "float on, match:title ^(Select a File)(.*)$"
+        "size 800 600, match:title ^(Select a File)(.*)$"
+        "float on, match:title ^(Choose wallpaper)(.*)$"
+        "size 800 600, match:title ^(Choose wallpaper)(.*)$"
+        "float on, match:title ^(Open Folder)(.*)$"
+        "size 800 600, match:title ^(Open Folder)(.*)$"
+        "float on, match:title ^(Save As)(.*)$"
+        "size 800 600, match:title ^(Save As)(.*)$"
+        "float on, match:title ^(Library)(.*)$"
+        "size 800 600, match:title ^(Library)(.*)$"
+        "float on, match:title ^(File Upload)(.*)$"
+        "size 800 600, match:title ^(File Upload)(.*)$"
+        
+        # Float small
+        "float on, match:class thunar"
+        "size 1280 720, match:class thunar"
+        "float on, match:class feh"
+        "size 1280 720, match:class feh"
+        "float on, match:title kitty"
+        "size 1280 720, match:title kitty"
+        
+        # Media
+        "pin on, match:title ^(Picture-in-Picture)$"
+        "float on, match:title ^(Picture-in-Picture)$"
+        "size 640 360, match:title ^(Picture-in-Picture)$"
+        "pin on, match:title ^(Discord Popout)$"
+        "float on, match:title ^(Discord Popout)$"
+        "size 640 360, match:title ^(Discord Popout)$"
+        
+        # Suppress
+        "suppress_event maximize, match:class .*"
       ];
 
       "$mainMod" = "SUPER";
@@ -201,8 +194,8 @@
         "$mainMod SHIFT, P, exec, rofi -show power-menu -modi power-menu:rofi-power-menu" 
 
         # passing input to apps
-        "CTRL SHIFT, M, pass, class:^(vesktop)$"
-        "CTRL SHIFT, M, pass, class:^(discord)$"
+        # "CTRL SHIFT, M, pass, class:^(vesktop)$"
+        # "CTRL SHIFT, M, pass, class:^(discord)$"
       ];
 
       binde = [
