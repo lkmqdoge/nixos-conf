@@ -3,6 +3,8 @@
     enable = true;
 
     interactiveShellInit = ''
+      fish_vi_key_bindings
+
       function dotnet_using_command
         set cmd (commandline -opc)
         if [ (count $cmd) -gt 1 ]
@@ -292,6 +294,7 @@
       "ndv" = "nix develop --command fish";
       "tm"  = "tmux";
       "tma" = "tmux attach";
+      "ff"  = "fastfetch";
     };
   };
 }

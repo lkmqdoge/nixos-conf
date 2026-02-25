@@ -195,7 +195,7 @@
 
         # passing input to apps
         # "CTRL SHIFT, M, pass, class:^(vesktop)$"
-        # "CTRL SHIFT, M, pass, class:^(discord)$"
+        "CTRL SHIFT, M, pass, class:^(discord)$"
       ];
 
       binde = [

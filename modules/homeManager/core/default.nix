@@ -22,6 +22,7 @@ in
       telegram-desktop  # fuck this app
       feh               # image viewer
       pwvucontrol       # sound control
+      peazip            # gui archive viewer
       qbittorrent
       mpv
       vlc
@@ -30,7 +31,8 @@ in
       discord
       libreoffice
       btop 
-
+      pinta # simple image editor
+      
       # https://github.com/nix-community/nix-melt
       nix-melt # A TUI flake.lock viewer
       # https://github.com/utdemir/nix-tree
@@ -41,6 +43,9 @@ in
       ffmpeg
       swww    # wallpapers
       wttrbar # show weather 
+
+      ydotool
+
       # things for screenshot
       grim 
       slurp 
