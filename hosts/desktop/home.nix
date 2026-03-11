@@ -43,7 +43,6 @@ in
 
       # music
       audacity
-      reaper
       helm
     ;})
   ];

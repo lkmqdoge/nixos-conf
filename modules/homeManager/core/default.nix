@@ -28,7 +28,7 @@ in
       vlc
       firefox
       krita
-      discord
+      vesktop
       libreoffice
       btop 
       pinta # simple image editor
