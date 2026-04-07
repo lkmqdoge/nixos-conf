@@ -23,6 +23,7 @@ in
       feh               # image viewer
       pwvucontrol       # sound control
       peazip            # gui archive viewer
+      pgadmin4
       qbittorrent
       mpv
       vlc

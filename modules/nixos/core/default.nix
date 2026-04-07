@@ -7,7 +7,10 @@
     };
     podman.enable = true;
   };
+
   users.groups.docker.members = [ "lkmqdoge" ];
+
+  services.postgresql.enable = true;
 
   environment.systemPackages = builtins.attrValues {
     inherit (pkgs)

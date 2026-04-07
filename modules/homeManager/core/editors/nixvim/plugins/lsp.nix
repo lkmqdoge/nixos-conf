@@ -85,6 +85,10 @@
             };
           };
 
+          zls = {
+            enable = true;
+          };
+
           # gdshader_lsp.enable = true;
           gdscript = {
             enable = true;

@@ -25,6 +25,7 @@ in
       tokei # count your code
       jdk
       protobuf
+      zig
 
       # nix
       deadnix # finds and remove unused nix code
