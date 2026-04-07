@@ -9,6 +9,7 @@
   ];
 
   modules.nixos.system.useBluetooth.enable = true; 
+  modules.nixos.useTablet.enable = true;
 
   environment.systemPackages = builtins.attrValues {
     inherit (pkgs)
