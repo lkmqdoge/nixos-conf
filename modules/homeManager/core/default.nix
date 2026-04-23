@@ -30,7 +30,8 @@ in
       firefox
       krita
       vesktop
-      libreoffice
+      libreoffice       # piece of shit
+      onlyoffice-desktopeditors
       btop 
       pinta # simple image editor
       
