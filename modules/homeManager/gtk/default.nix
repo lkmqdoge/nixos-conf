@@ -1,7 +1,7 @@
-{pkgs, ...}: {
+{pkgs, config, ...}: {
   gtk = {
+    gtk4.theme = config.gtk.theme;
     enable = true;
-
     font = {
       name = "CaskaydiaCove Nerd Font";
       size = 12;

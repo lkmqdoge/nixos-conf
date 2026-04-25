@@ -5,7 +5,7 @@
     ./cmp.nix
     ./colorizer.nix
     ./comment.nix
-    ./dap.nix
+    # ./dap.nix
 
     ./easy-dotnet.nix
     ./fidget.nix

@@ -1,5 +1,6 @@
 {
   programs.yazi = {
+    shellWraperName = "y";
     enable = true;
     settings = {
       manager = {

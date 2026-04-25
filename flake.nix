@@ -5,9 +5,11 @@
   nixConfig = {
     extra-trusted-substituters = [
       "https://nix-community.cachix.org"
+      "https://hyprland.cachix.org"
     ];
     extra-trusted-public-keys = [
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+      "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
     ];
   };
 
@@ -27,17 +29,12 @@
     prismlauncher.url = "github:PrismLauncher/PrismLauncher";
     prismlauncher.inputs.nixpkgs.follows = "nixpkgs";
 
-    alejandra.url = "github:kamadorueda/alejandra/3.1.0";
-    alejandra.inputs.nixpkgs.follows = "nixpkgs";
-
     musnix.url = "github:musnix/musnix";
-
   };
 
   outputs = inputs @ {
-    self, # this flake
+    self,
     nixpkgs,
-    alejandra,
     home-manager,
     ...
     }:
@@ -48,6 +45,7 @@
         system = "x86_64-linux";
 
         modules = [
+          (import ./overlays)
           ./hosts/laptop/configuration.nix
           home-manager.nixosModules.home-manager
           {
@@ -67,6 +65,7 @@
         system = "x86_64-linux";
 
         modules = [
+          (import ./overlays)
           ./hosts/desktop/configuration.nix
           inputs.musnix.nixosModules.musnix
           home-manager.nixosModules.home-manager

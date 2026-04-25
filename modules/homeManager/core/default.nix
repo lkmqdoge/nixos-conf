@@ -8,8 +8,8 @@ in
     ./fish
     
     ./tmux.nix
-    ./vifm.nix
-    ./yazi.nix
+    # ./vifm.nix
+    # ./yazi.nix
   ];
 
   home.packages = mkMerge [
@@ -30,7 +30,7 @@ in
       firefox
       krita
       vesktop
-      libreoffice       # piece of shit
+      # libreoffice       # piece of shit
       onlyoffice-desktopeditors
       btop 
       pinta # simple image editor
@@ -43,7 +43,7 @@ in
       libnotify
       pamixer
       ffmpeg
-      swww    # wallpapers
+      awww    # wallpapers
       wttrbar # show weather 
 
       ydotool

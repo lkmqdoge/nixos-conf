@@ -17,10 +17,8 @@ in
     hardware.xpadneo.enable = true; # xbox wireless controller
     environment.systemPackages = mkMerge [
       (builtins.attrValues { inherit (pkgs)
-        lutris
+        # lutris
         r2modman 
-        mangohud
-        protonup-ng
       ;})
       (mkIf tcfg.enable [pkgs.osu-lazer-bin])
     ];

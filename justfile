@@ -3,3 +3,4 @@ default:
 
 nhs host:
   nh os switch . -H {{host}}
+

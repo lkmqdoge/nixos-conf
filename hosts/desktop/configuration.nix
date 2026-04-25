@@ -21,8 +21,5 @@
 
   environment.systemPackages = with pkgs; [
     lm_sensors
-    wine-staging
-    yabridge
-    yabridgectl
   ];
 }
