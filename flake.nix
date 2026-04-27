@@ -46,14 +46,14 @@
 
         modules = [
           (import ./overlays)
-          ./hosts/laptop/configuration.nix
+          ./Hosts/laptop/configuration.nix
           home-manager.nixosModules.home-manager
           {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
               extraSpecialArgs = {inherit inputs;};
-              users.lkmqdoge = import ./hosts/laptop/home.nix;
+              users.lkmqdoge = import ./Hosts/laptop/home.nix;
             };
           }
         ];
@@ -66,7 +66,7 @@
 
         modules = [
           (import ./overlays)
-          ./hosts/desktop/configuration.nix
+          ./Hosts/desktop/configuration.nix
           inputs.musnix.nixosModules.musnix
           home-manager.nixosModules.home-manager
           {
@@ -74,7 +74,7 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               extraSpecialArgs = {inherit inputs;};
-              users.lkmqdoge = import ./hosts/desktop/home.nix;
+              users.lkmqdoge = import ./Hosts/desktop/home.nix;
             };
           }
         ];
