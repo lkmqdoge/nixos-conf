@@ -50,7 +50,6 @@
       };
 
       dwindle = {
-        pseudotile = "yes";
         preserve_split = "yes";
       };
 
@@ -69,7 +68,6 @@
         focus_on_activate = true;
         disable_hyprland_logo = true;
         force_default_wallpaper = 0;
-        vfr = true;
       };
 
       device = {
@@ -133,8 +131,6 @@
         "$mainMod, V, togglefloating, "
         "$mainMod, P, pin"
         "$mainMod, F, fullscreen"
-
-        "$mainMod SHIFT, D, togglesplit,"
 
         "$mainMod, H, movefocus, l"
         "$mainMod, L, movefocus, r"
