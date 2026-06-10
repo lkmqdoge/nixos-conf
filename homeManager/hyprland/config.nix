@@ -10,7 +10,7 @@
 
       # autostart
       exec-once = [
-        "swww-daemon &"                             # wallpaper 
+        "awww-daemon &"                             # wallpaper 
         "nm-applet --indicator &"
         "hyprctl setcursor Bibata-Modern-Ice 24 &"
         "waybar &"

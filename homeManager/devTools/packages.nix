@@ -39,14 +39,9 @@ in
       cmake
       gdb
 
-      # golang
-      go
-      protoc-gen-go
-      gotools
-      delve # go debugger
-
       # Web development
       typescript
+      pnpm
       nodejs_24
       ;
     })

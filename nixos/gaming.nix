@@ -1,4 +1,4 @@
-{ pkgs, lib, config, ...}: 
+{ pkgs, pkgsStable, lib, config, ...}: 
 let
   cfg = config.modules.nixos.gaming;
   tcfg = config.modules.nixos.useTablet;
@@ -17,9 +17,9 @@ in
     hardware.xpadneo.enable = true; # xbox wireless controller
     environment.systemPackages = mkMerge [
       (builtins.attrValues { inherit (pkgs)
-        # lutris
         r2modman 
       ;})
+      ([pkgsStable.lutris ])
       (mkIf tcfg.enable [pkgs.osu-lazer-bin])
     ];
 

@@ -26,7 +26,7 @@
         };
 
         servers = {
-          roslyn_ls.enable = true;
+          # roslyn_ls.enable = true;
           just.enable = true;
           cmake.enable = true;
           clangd.enable = true;
@@ -42,6 +42,8 @@
           gopls.enable = true;
           zls.enable = true;
           ts_ls.enable = true;
+          yaml-language-server.enable = true;
+          docker_compose_language_service.enable = true;
 
           gdscript = {
             enable = true;

@@ -8,13 +8,26 @@
     feh               # image viewer
     pwvucontrol       # sound control
     peazip            # gui archive viewer
-    pgadmin4
     qbittorrent
     mpv
     vlc
     firefox
+    discord
+    mcomix            # comic reader
+    bruno             # ide for exploring api
+
+    yt-dlp
     krita
-    vesktop
+    (writeTextFile {
+      name = "krita-thumbnailer";
+      destination = "/share/thumbnailers/kra.thumbnailer";
+      text = ''
+        [Thumbnailer Entry]
+        Exec=sh -c "${unzip}/bin/unzip -p %i preview.png > %o"
+        MimeType=application/x-krita;
+      '';
+    })
+
     # libreoffice       # piece of shit
     onlyoffice-desktopeditors
     btop 
@@ -33,12 +46,12 @@
 
     ydotool
 
-    # things for screenshot
-    grim 
-    slurp 
-    wl-clipboard 
     grc   # colorizer
     delta # better git pager
     bat   # better cat
+
+    grim 
+    slurp 
+    wl-clipboard 
   ];
 }

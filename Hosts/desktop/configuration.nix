@@ -18,6 +18,10 @@
   hardware.amdgpu.overdrive.enable = true;
   hardware.amdgpu.overdrive.ppfeaturemask = "0xffffffff";
   services.lact.enable = true;
+  services.zerotierone.enable = true;
+
+  networking.firewall.allowedTCPPorts = [ 50505 ];
+  networking.firewall.allowedUDPPorts = [ 50505 ];
 
   environment.systemPackages = with pkgs; [
     lm_sensors

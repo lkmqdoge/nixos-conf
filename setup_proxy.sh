@@ -1,4 +1,4 @@
-#!/usr/bin/env/ bash
+#!/usr/bin/env bash
 set -e
 
 sudo mkdir -p /run/systemd/system/nix-daemon.service.d/
