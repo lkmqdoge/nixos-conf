@@ -8,8 +8,20 @@
   };
 
   time.timeZone = "Europe/Moscow";
-  i18n.defaultLocale = "en_US.UTF-8";
-  i18n.extraLocales = ["ru_RU.UTF-8/UTF-8"];
+  i18n = {
+    defaultLocale = "en_US.UTF-8";
+    extraLocales = ["ru_RU.UTF-8/UTF-8"];
+
+    inputMethod = {
+      enable = true;
+      type = "fcitx5";
+      fcitx5.waylandFrontend = true;
+      fcitx5.addons = with pkgs; [ 
+        fcitx5-mozc-ut
+        fcitx5-gtk 
+      ];
+    };
+  };
   system.stateVersion = "24.11";
 
   nixpkgs.config.allowUnfree = true;

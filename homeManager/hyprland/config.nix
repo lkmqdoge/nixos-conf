@@ -14,7 +14,7 @@
         "nm-applet --indicator &"
         "hyprctl setcursor Bibata-Modern-Ice 24 &"
         "waybar &"
-        # "hyprpanel &"
+        "fcitx5 -d &"
         "hyprlock"
       ];
 

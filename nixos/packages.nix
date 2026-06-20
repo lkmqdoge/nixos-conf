@@ -10,8 +10,7 @@
 
   users.groups.docker.members = [ "lkmqdoge" ];
 
-  environment.systemPackages = builtins.attrValues {
-    inherit (pkgs)
+  environment.systemPackages = with pkgs; [
     # core utils 
     gnumake
     just
@@ -43,6 +42,8 @@
     procs
     btop
 
+    qt6Packages.fcitx5-configtool
+
     # networking tools
     tcpdump
     nmap
@@ -59,6 +60,5 @@
     # misc 
     tree
     tealdeer # tldr
-    ;
-  };
+  ];
 }

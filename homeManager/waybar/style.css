@@ -8,9 +8,11 @@
     margin: 0px;
 }
 
-window#waybar {
-    background-color: rgba(0, 0, 0, 0.9);
+#window {
+    background-color: rgba(67, 67, 67, 0.7);
     color: #ebdbb2;
+    margin-top: -50px;
+    margin-bottom: -50px;
 }
 
 #workspaces {
