@@ -1,6 +1,22 @@
 { pkgs, ... }:
+let 
+  runDiscordWithProxy = (pkgs.writeShellScriptBin "runDiscordWithProxy" ''
+    exec ${pkgs.vesktop}/bin/vesktop --proxy-server="socks5://127.0.0.1:1080" "$@"
+  '');
+
+  runDiscordWithProxyDesktop = pkgs.makeDesktopItem {
+    name = "desktopproxy";
+    desktopName = "VesktopProxy";
+    startupWMClass = "vesktop";
+    icon = "vesktop";
+    genericName = "Vesktop";
+    exec = "runDiscordWithProxy";
+  };
+in
 {
   home.packages = with pkgs; [
+    runDiscordWithProxy
+    runDiscordWithProxyDesktop
     # gui apps
     prismlauncher     # minecraft launcher
     kitty             # terminal emulator
@@ -12,7 +28,7 @@
     mpv
     vlc
     firefox
-    discord
+    vesktop 
     mcomix            # comic reader
     bruno             # ide for exploring api
 
