@@ -3,6 +3,7 @@
     diagnostic.settings = {
       signs = true;
       virtual_text = true;
+      virtual_lines = false;
     };
 
     extraConfigLua = ''

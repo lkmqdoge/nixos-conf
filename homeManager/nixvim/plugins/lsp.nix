@@ -26,7 +26,7 @@
         };
 
         servers = {
-          # roslyn_ls.enable = true;
+          roslyn_ls.enable = false;
           just.enable = true;
           cmake.enable = true;
           clangd.enable = true;
