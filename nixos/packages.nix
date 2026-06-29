@@ -4,6 +4,12 @@
   virtualisation = {
     docker = {
       enable = true;
+      daemon.settings = {
+        "proxies" = {
+          "http-proxy" = "127.0.0.1:1080";
+          "https-proxy" = "127.0.0.1:1080";
+        };
+      };
     };
     podman.enable = true;
   };
