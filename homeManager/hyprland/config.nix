@@ -3,6 +3,8 @@
     enable = true;
     package = null;
     portalPackage = null;
+    configType = "hyprlang";
+
     systemd.variables = ["--all"];
 
     settings = {
@@ -114,7 +116,7 @@
         "pin on, match:title ^(Discord Popout)$"
         "float on, match:title ^(Discord Popout)$"
         "size 640 360, match:title ^(Discord Popout)$"
-        
+          
         # Suppress
         "suppress_event maximize, match:class .*"
       ];
