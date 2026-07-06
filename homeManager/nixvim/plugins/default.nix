@@ -10,6 +10,7 @@
     ./mini.nix
     ./neotree.nix
     ./snacks.nix
+    ./snippets.nix
     ./trouble.nix
   ];
 
@@ -28,5 +29,4 @@
   programs.nixvim.plugins.ts-autotag.enable = true;
   programs.nixvim.plugins.vim-css-color.enable = true;
   programs.nixvim.plugins.nvim-surround.enable = true;
-  programs.nixvim.plugins.friendly-snippets.enable = true;
 }
