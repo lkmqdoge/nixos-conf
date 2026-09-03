@@ -23,6 +23,9 @@
   networking.firewall.allowedTCPPorts = [ 50505 ];
   networking.firewall.allowedUDPPorts = [ 50505 ];
 
+  services.logmein-hamachi.enable = true;
+  programs.haguichi.enable = true;
+
   environment.systemPackages = with pkgs; [
     lm_sensors
   ];

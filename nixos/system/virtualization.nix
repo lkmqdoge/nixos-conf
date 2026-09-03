@@ -7,7 +7,6 @@ in
   options.modules.nixos.system.useVirtualisation.enable
     = mkEnableOption "Install packages for virtualisation";
 
-
   config = mkIf cfg.enable {
     virtualisation = {
       libvirtd = {
@@ -22,7 +21,6 @@ in
 
     users.groups.libvirtd.members = [ "lkmqdoge" ];
 
-
     programs.dconf.enable = true;
     programs.virt-manager.enable = true;
 
@@ -35,9 +33,8 @@ in
       adwaita-icon-theme
       
       # sandboxing
-      wine64
+      wineWow64Packages.stable
       winetricks
-      steam-run
     ];
 
     services.flatpak.enable = true;

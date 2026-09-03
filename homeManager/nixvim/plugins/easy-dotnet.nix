@@ -4,6 +4,7 @@
     settings = {
       lsp = { # use roslyn plugin instead
         enabled = true;
+        auto_refresh_codelens = false;
       };
 
       auto_bootstrap_namespace = {

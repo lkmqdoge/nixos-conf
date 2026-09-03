@@ -7,7 +7,7 @@
       enable = true;
       settings = {
         default_session = {
-          command = "${pkgs.hyprland}/bin/Hyprland";
+          command = "${pkgs.hyprland}/bin/start-hyprland";
           user = "lkmqdoge";
         };
       };

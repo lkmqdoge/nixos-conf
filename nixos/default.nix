@@ -13,5 +13,6 @@
     ./otd.nix
     ./packages.nix
     ./thunar.nix
+    ./webcam.nix
   ];
 }

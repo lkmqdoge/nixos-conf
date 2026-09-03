@@ -13,6 +13,13 @@
         };
       };
 
+      lsp-signature = {
+        enable = true;
+        settings = {
+          hint_prefix = "";
+        };
+      };
+
       lsp = {
         inlayHints = false; # is fucking hate it
         enable = true;
@@ -42,8 +49,6 @@
           gopls.enable = true;
           zls.enable = true;
           ts_ls.enable = true;
-          yaml-language-server.enable = true;
-          docker_compose_language_service.enable = true;
 
           gdscript = {
             enable = true;

@@ -19,7 +19,11 @@ in
       (builtins.attrValues { inherit (pkgs)
         r2modman 
       ;})
-      ([pkgsStable.lutris ])
+      ([
+        pkgsStable.lutris
+        pkgs.mangohud
+        pkgs.ludusavi
+      ])
       (mkIf tcfg.enable [pkgs.osu-lazer-bin])
     ];
 

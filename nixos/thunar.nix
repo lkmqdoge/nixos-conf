@@ -8,6 +8,9 @@
     thunar-archive-plugin
     thunar-vcs-plugin;
   };
+  environment.systemPackages = [
+    pkgs.dosfstools
+  ];
 
   services.gvfs.enable = true;    # Mount, trash, and other functionalities
   services.tumbler.enable = true; # Thumbnail support for images

@@ -17,7 +17,7 @@
   users.groups.docker.members = [ "lkmqdoge" ];
 
   environment.systemPackages = with pkgs; [
-    # core utils 
+    # utils 
     gnumake
     just
     fd # simple and fast alternative to find
@@ -42,9 +42,6 @@
     jq
     jc
 
-    w3m      # tui internet browser
-    testdisk # dead disk reading
-
     procs
     btop
 
@@ -60,11 +57,8 @@
     curl
     iperf3 # network performance test
 
-
     home-manager
 
-    # misc 
     tree
-    tealdeer # tldr
   ];
 }
