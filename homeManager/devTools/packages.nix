@@ -43,6 +43,8 @@ in
       typescript
       pnpm
       nodejs_24
+
+      android-studio
       ;
     })
 

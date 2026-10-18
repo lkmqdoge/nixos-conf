@@ -8,12 +8,16 @@
     ../../nixos
   ];
 
+  modules.nixos.gaming.enable = true;
+
   modules.nixos.system.useBluetooth.enable = true; 
   modules.nixos.useTablet.enable = true;
+  modules.nixos.system.useVirtualisation.enable = true; 
 
   environment.systemPackages = builtins.attrValues {
     inherit (pkgs)
     acpi # show battery status
+    lm_sensors
     brightnessctl
     cpupower-gui
     powertop # tool for analyzing power consumption
